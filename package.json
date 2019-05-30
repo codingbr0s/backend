@@ -7,7 +7,7 @@
     "build": "npm run tslint && npm run build-ts",
     "build-ts": "tsc",
     "prestart": "npm run build",
-    "serve": "npm run build && node ./dist/server.js",
+    "serve": "node ./dist/server.js",
     "start": "npm run serve",
     "predebug": "npm run build",
     "debug": "npm run build && npm run watch-debug",
