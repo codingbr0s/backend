@@ -1,0 +1,3 @@
+const SESSION_SECRET = 'Qryx2ULEAWmsSi4xQVjyNrbyREAXStMU7jdPfudYeZNHhfja3e6TpU886zww4hh';
+
+export {SESSION_SECRET};

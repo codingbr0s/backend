@@ -1,0 +1,6 @@
+.idea
+dist
+coverage
+logs
+node_modules
+*.iml
