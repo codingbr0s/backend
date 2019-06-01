@@ -22,6 +22,10 @@
     "triple-equals": [
       true,
       "allow-undefined-check"
+    ],
+    "no-namespace": [
+      true,
+      "allow-declarations"
     ]
   },
   "rulesDirectory": []

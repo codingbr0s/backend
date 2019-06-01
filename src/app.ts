@@ -59,4 +59,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
 logger.log('info', 'Started backend.');
 
+// tslint:disable-next-line:no-var-requires
+const gvi = require('./services/googlevision');
+
 export default app;

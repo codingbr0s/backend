@@ -27,13 +27,12 @@ export default (() => {
         }
     };
 
-    router.post('/user', [
+    router.post('/login', [
         checkSchema(schema)
     ], (req: Request, res: Response) => {
-        // Finds the validation errors in this request and wraps them in an object with handy functions
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.status(422).json({errors: errors.array()});
+            return res.status(401).send('Unauthorized!');
         }
         const username = req.body.username;
         res.json({id: 1234, username});

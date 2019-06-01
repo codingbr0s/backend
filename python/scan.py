@@ -61,6 +61,8 @@ def convertImage(b64string):
 		scale, warped = downscale_image(warped)
 		print("Resized image with %f scale" % scale)
 		retval, buf = cv2.imencode('.jpg', warped)
+
+		cv2.imwrite("test.jpg", warped);
 		
 		return True, base64_encode_array(buf)
 	else:
@@ -68,8 +70,11 @@ def convertImage(b64string):
 		scale, orig = downscale_image(orig)
 		print("Resized image with %f scale" % scale)
 		retval, buf = cv2.imencode('.jpg', orig)
+
+		cv2.imwrite("test.jpg", orig);
+
 		return False, base64_encode_array(buf)
 
 	
-with open('../receipt.jpg', 'rb') as fh:
+with open('rechnung5.jpg', 'rb') as fh:
 	retval, b64string = convertImage(base64.b64encode(fh.read()))

@@ -1,45 +1,56 @@
-import * as winston from 'winston';
+import chalk from 'chalk';
+import { createLogger, format, transports } from 'winston';
+const { combine, timestamp, label, printf } = format;
+const MESSAGE = Symbol.for('message');
 
 // define the custom settings for each transport (file, console)
 
 function createWinstonLogger(test: boolean) {
     if (!test) {
-        return winston.createLogger({
+        return createLogger({
             transports: [
-                new winston.transports.File({
+                new transports.File({
                     filename: `logs/error.log`,
                     level: 'error',
-                    format: winston.format.combine(
-                        winston.format.splat(),
-                        winston.format.simple()
+                    format: format.combine(
+                        format.splat(),
+                        format.simple()
                     )
                 }),
-                new winston.transports.File({
+                new transports.File({
                     filename: `logs/combined.log`,
                     level: 'info',
-                    format: winston.format.combine(
-                        winston.format.splat(),
-                        winston.format.simple()
+                    format: format.combine(
+                        format.splat(),
+                        format.simple()
                     )
                 }),
-                new winston.transports.Console({
+                new transports.Console({
                     level: 'debug',
-                    format: winston.format.combine(
-                        winston.format.splat(),
-                        winston.format.simple()
+                    format: format.combine(
+                        format.timestamp(),
+                        format.splat(),
+                        format.colorize(),
+                        format.printf(
+                            (info) => ` ${info.label}  ${info.timestamp}  ${info.level} : ${info.message}`
+                        )
                     )
                 })
             ],
             exitOnError: false, // do not exit on handled exceptions
         });
     } else {
-        return winston.createLogger({
+        return createLogger({
             transports: [
-                new winston.transports.Console({
+                new transports.Console({
                     level: 'debug',
-                    format: winston.format.combine(
-                        winston.format.splat(),
-                        winston.format.simple()
+                    format: format.combine(
+                        format.timestamp(),
+                        format.splat(),
+                        format.colorize(),
+                        format.printf(
+                            (info) => ` ${info.label}  ${info.timestamp}  ${info.level} : ${info.message}`
+                        )
                     )
                 })
             ]
