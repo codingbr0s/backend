@@ -2,7 +2,6 @@
 // Imports the Google Cloud client library
 // tslint:disable-next-line:no-var-requires
 
-import * as fs from 'fs';
 import _ from 'lodash';
 import {IWordWithConfidence} from '../common';
 
@@ -13,12 +12,6 @@ const client = new vision.ImageAnnotatorClient({
 });
 
 export function parseImage(img: Buffer): Promise<IWordWithConfidence[]> {
-
-    // return new Promise(((resolve) => {
-    //     const json = JSON.parse(fs.readFileSync('output.json').toString());
-    //     resolve(getWordsWithConfidence(json[0].fullTextAnnotation));
-    // }));
-
     return client
         .documentTextDetection(img)
         .then((results: any) => {
@@ -76,4 +69,22 @@ function getPosForWord(word: any): {
     const y = vertices[0].y + (vertices[3].y - vertices[0].y) / 2;
 
     return {x, y};
+}
+
+function findIBAN(text: string) {
+    const ibanRegex = /\b[A-Z]{2}[0-9]{2}(?:[ ]?[0-9]{4}){4}(?!(?:[ ]?[0-9]){3})(?:[ ]?[0-9]{1,2})?\b/gm;
+    const ibanStrippedRegex = /^([A-Z]{2})([0-9]{2})([A-Z0-9]{9,30})$/;
+
+    const occurrences = [];
+    let matches;
+
+    do {
+        matches = ibanRegex.exec(text);
+        if (matches) {
+            occurrences.push(matches[0]);
+        }
+    } while (matches);
+
+    return occurrences.map((iban) => iban.replace(/[^A-Z0-9]+/gi, '').toUpperCase())
+        .filter((iban) => ibanStrippedRegex.test(iban));
 }

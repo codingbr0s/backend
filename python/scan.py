@@ -88,6 +88,6 @@ def convertImage(b64string):
 		return False, base64_encode_array(buf)
 
 	
-with open('Arztrechnung.jpg', 'rb') as fh:
+with open('Arzt2.jpg', 'rb') as fh:
 	retval, b64string = convertImage(base64.b64encode(fh.read()))
 

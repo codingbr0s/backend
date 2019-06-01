@@ -12,7 +12,7 @@ module.exports = {
         '^.+\\.(ts|tsx)$': 'ts-jest'
     },
     testMatch: [
-        '**/test/**/*.test.js.(ts|js)'
+        '**/test/**/*.callgapi.js.js.(ts|js)'
     ],
     testEnvironment: 'node',
     preset: 'ts-jest'
