@@ -22,11 +22,7 @@ export default (() => {
         res.type('application/json');
         scanImageAndMatch(files[0].buffer).then((obj) => {
             logger.info('Sending response.');
-            res.json({
-                filename: `${files[0].originalname}-scanned.jpg`,
-                data: obj.matched ? obj.matched.toString('base64') : files[0].buffer,
-                iban: obj.iban
-            });
+            res.json(obj.infos);
         }).catch((reason) => {
             logger.error('Error while handling image!', reason);
         });
