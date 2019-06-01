@@ -1,4 +1,5 @@
 import {NextFunction, Request, Response} from 'express';
+import {IKnownImage} from '../common';
 
 import {scanImageAndMatch} from '../services/scanning';
 import logger from '../util/winston';
@@ -20,9 +21,9 @@ export default (() => {
         const files: any = req.files;
 
         res.type('application/json');
-        scanImageAndMatch(files[0].buffer).then((obj) => {
+        scanImageAndMatch(files[0].buffer).then((scannedInvoice: IKnownImage) => {
             logger.info('Sending response.');
-            res.json(obj.infos);
+            res.json(scannedInvoice.info);
         }).catch((reason) => {
             logger.error('Error while handling image!', reason);
         });

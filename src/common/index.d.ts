@@ -6,5 +6,19 @@ export interface IWordWithConfidence {
 
 export interface IKnownImage {
     fixwords: string[];
-    base64: string;
+    info: {
+        desc: string;
+        creditor: string;
+        iban: string;
+        total: number;
+    };
+}
+
+export interface ICategory {
+    id: number;
+    name: string;
+}
+
+export interface ISubCategory extends ICategory {
+    topCategoryId: number;
 }

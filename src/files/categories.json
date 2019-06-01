@@ -6,7 +6,6 @@
   },
   {
     "topCategoryId": 17,
-
     "categoryId": 174100,
     "CategoryName": "Verbindlichkeiten Lohn und Kirchensteuer"
   },
@@ -318,19 +317,16 @@
   },
   {
     "topCategoryId": 84,
-
     "categoryId": 840020,
     "CategoryName": "Steuerpflichtige Gutachten 19% Ust"
   },
   {
     "topCategoryId": "04",
-
     "categoryId": "048000",
     "CategoryName": "Geringwertige Wirtschaftsgüter"
   },
   {
     "topCategoryId": "07",
-
     "categoryId": "072000",
     "CategoryName": "Praxisdarlehen"
   }

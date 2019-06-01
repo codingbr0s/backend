@@ -28,10 +28,13 @@ export default (() => {
     router.post('/', (req: Request, res: Response) => {
         const data = req.body;
 
+        const timestamp = new Date().toISOString();
+
         const transaction = Object.assign({
-            timestamp: Date.now()
+            timestamp: timestamp.substr(timestamp.indexOf('T'))
         }, data);
 
+        res.json(transaction);
     });
 
 });
