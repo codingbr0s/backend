@@ -1,0 +1,251 @@
+[
+  {
+    "name": "Privatärztliche Verrechnungsstelle",
+    "iban": "DE29300606011983334500",
+    "bank": "apoBank"
+  },
+  {
+    "name": "KV Nordrhein",
+    "iban": "DE41300606011035590200",
+    "bank": "apoBank"
+  },
+  {
+    "name": "Krankenhaus Düsseldorf",
+    "iban": "DE55300606013404488400",
+    "bank": "apoBank"
+  },
+  { "name": "Schmidt", "iban": "DE72300606014572208500", "bank": "apoBank" },
+  {
+    "name": "NaonTeach (Akupunkturschulung)",
+    "iban": "DE41300606019745676900",
+    "bank": "apoBank"
+  },
+  {
+    "name": "NaonITServices (Kopierer)",
+    "iban": "DE78300606015540780700",
+    "bank": "apoBank"
+  },
+  {
+    "name": "DÄV Versicherung",
+    "iban": "DE51300606017603734500",
+    "bank": "apoBank"
+  },
+  {
+    "name": "Steuer-Stefan",
+    "iban": "DE52300606017659196200",
+    "bank": "apoBank"
+  },
+  {
+    "name": "Ärztekammer",
+    "iban": "DE91300606012004673700",
+    "bank": "apoBank"
+  },
+  {
+    "name": "apoVermögensbildung",
+    "iban": "DE41300606015145882900",
+    "bank": "apoBank"
+  },
+  {
+    "name": "Berufsgenossenschaft für Gesundheitsdienst und Wohlfahrtspflege",
+    "iban": "DE66300606015869297500",
+    "bank": "apoBank"
+  },
+  { "name": "apoBank", "iban": "DE99300606019809207500", "bank": "apoBank" },
+  {
+    "name": "Vertretungs-Vroni",
+    "iban": "DE40300606012317273800",
+    "bank": "apoBank"
+  },
+  {
+    "name": "Ärzte ohne Grenzen e.V.",
+    "iban": "DE14300606015105121300",
+    "bank": "apoBank"
+  },
+  {
+    "name": "Tor-Apotheke",
+    "iban": "DE34300606012662559000",
+    "bank": "apoBank"
+  },
+  {
+    "name": "MediServ",
+    "iban": "DE40300400008555106900",
+    "bank": "Commerzbank"
+  },
+  {
+    "name": "Patient Norbert Nagel",
+    "iban": "DE21300400004772155000",
+    "bank": "Commerzbank"
+  },
+  {
+    "name": "Burberry",
+    "iban": "DE19300400001007969700",
+    "bank": "Commerzbank"
+  },
+  {
+    "name": "Bloomon-Shop",
+    "iban": "DE56300400123213187100",
+    "bank": "Commerzbank"
+  },
+  {
+    "name": "Ludwig Landlord",
+    "iban": "DE98300400143034408200",
+    "bank": "Commerzbank"
+  },
+  {
+    "name": "Monster.de",
+    "iban": "DE83300412343533005500",
+    "bank": "Commerzbank"
+  },
+  {
+    "name": "Vodafone",
+    "iban": "DE20300453231323815600",
+    "bank": "Commerzbank"
+  },
+  {
+    "name": "Patient Max Meier",
+    "iban": "DE11300700247471748800",
+    "bank": "Deutsche Bank"
+  },
+  {
+    "name": "Pharmaunternehmen X",
+    "iban": "DE11300700248932225400",
+    "bank": "Deutsche Bank"
+  },
+  { "name": "Aral", "iban": "DE10300700242220122000", "bank": "Deutsche Bank" },
+  {
+    "name": "Eintreiber Emil",
+    "iban": "DE11300700245883575400",
+    "bank": "Deutsche Bank"
+  },
+  {
+    "name": "Helpling.de",
+    "iban": "DE11300700241188092400",
+    "bank": "Deutsche Bank"
+  },
+  {
+    "name": "google Adwords",
+    "iban": "DE11300700245628085600",
+    "bank": "Deutsche Bank"
+  },
+  {
+    "name": "Restaurant zur Linde",
+    "iban": "DE11300700243281224600",
+    "bank": "Deutsche Bank"
+  },
+  {
+    "name": "Amazon (Handdiktiergerät)",
+    "iban": "DE46300308809908307500",
+    "bank": "HSBC Deutschland"
+  },
+  {
+    "name": "Amazon",
+    "iban": "DE92300308809084216200",
+    "bank": "HSBC Deutschland"
+  },
+  {
+    "name": "Amazon (Buch)",
+    "iban": "DE72300308802596176900",
+    "bank": "HSBC Deutschland"
+  },
+  {
+    "name": "Amazon (CD)",
+    "iban": "DE32300308806998001800",
+    "bank": "HSBC Deutschland"
+  },
+  {
+    "name": "DHL online",
+    "iban": "DE80380100007697719700",
+    "bank": "Postbank"
+  },
+  {
+    "name": "Hermal Praxisbedarf",
+    "iban": "DE23380100533055880900",
+    "bank": "Postbank"
+  },
+  {
+    "name": "PCV Software",
+    "iban": "DE63380100531474292900",
+    "bank": "Postbank"
+  },
+  { "name": "Telekom", "iban": "DE32380100009931553600", "bank": "Postbank" },
+  {
+    "name": "Reinigung Rheingold",
+    "iban": "DE59380100006699862900",
+    "bank": "Postbank"
+  },
+  {
+    "name": "JP Krämer",
+    "iban": "DE45440501996392486400",
+    "bank": "Sparkasse Dortmund"
+  },
+  {
+    "name": "Patientin Rita Reha",
+    "iban": "DE82300501106321016600",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "Städische Abfallwirtschaft",
+    "iban": "DE57300501105858106100",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "Medizinisch-technischer Kundendienst",
+    "iban": "DE53300501102241852800",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "Garagen-Gerda (DirectDebit)",
+    "iban": "DE45300501106449467100",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "Finanzkasse Düsseldorf",
+    "iban": "DE45300501106604157000",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "Betriebsstättenfinanzamt Düsseldorf-Süd",
+    "iban": "DE63300501103411226500",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "Sozialkasse X",
+    "iban": "DE34300501104666352100",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "evoPark",
+    "iban": "DE29370501984849731000",
+    "bank": "Sparkasse Köln"
+  },
+  {
+    "name": "Lesezirkel",
+    "iban": "DE65740624908027735900",
+    "bank": "Volks- und Raiffeisenbank Dortmund"
+  },
+  {
+    "name": "R+V Versicherung",
+    "iban": "DE61510900003213905200",
+    "bank": "Volks- und Raiffeisenbank Münster"
+  },
+  {
+    "name": "Empfangs Erika",
+    "iban": "DE52300501106644987300",
+    "bank": "Sparkasse Düsseldorf"
+  },
+  {
+    "name": "Labor Lisa",
+    "iban": "DE47300700247899848500",
+    "bank": "Deutsche Bank Düsseldorf"
+  },
+  {
+    "name": "Helferin Hanna",
+    "iban": "DE40300209006079089600",
+    "bank": "Targobank Düsseldorf"
+  },
+  {
+    "name": "Frau Schmidt",
+    "iban": "DE76300700244898023000",
+    "bank": "Deutsche Bank Düsseldorf"
+  }
+]
