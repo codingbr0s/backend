@@ -1,0 +1,394 @@
+[
+  {
+    "L1CategoryId": 17,
+    "L1CategoryName": "Lohnzahlungen",
+    "L2CategoryId": 1740,
+    "L3CategoryId": 174000,
+    "CategoryName": "Verbindlichkeiten aus Lohn und Gehalt"
+  },
+  {
+    "L1CategoryId": 17,
+    "L1CategoryName": "Lohnzahlungen",
+    "L2CategoryId": 1741,
+    "L3CategoryId": 174100,
+    "CategoryName": "Verbindlichkeiten Lohn und Kirchensteuer"
+  },
+  {
+    "L1CategoryId": 17,
+    "L1CategoryName": "Lohnzahlungen",
+    "L2CategoryId": 1742,
+    "L3CategoryId": 174200,
+    "CategoryName": "Verbindlichkeiten soziale Sicherheit"
+  },
+  {
+    "L1CategoryId": 17,
+    "L1CategoryName": "Lohnzahlungen",
+    "L2CategoryId": 1750,
+    "L3CategoryId": 175000,
+    "CategoryName": "Verbindlichkeiten aus Vermögensbildung"
+  },
+  {
+    "L1CategoryId": 18,
+    "L1CategoryName": "Versicherungen",
+    "L2CategoryId": 1820,
+    "L3CategoryId": 182000,
+    "CategoryName": "Sonderausgaben beschränkt abzugsfähige"
+  },
+  {
+    "L1CategoryId": 18,
+    "L1CategoryName": "Versicherungen",
+    "L2CategoryId": 1820,
+    "L3CategoryId": 182010,
+    "CategoryName": "Lebensversicherungen"
+  },
+  {
+    "L1CategoryId": 18,
+    "L1CategoryName": "Versicherungen",
+    "L2CategoryId": 1820,
+    "L3CategoryId": 182040,
+    "CategoryName": "Unfallversicherung"
+  },
+  {
+    "L1CategoryId": 18,
+    "L1CategoryName": "Versicherungen",
+    "L2CategoryId": 1820,
+    "L3CategoryId": 182050,
+    "CategoryName": "Haftpflichtversicherung"
+  },
+  {
+    "L1CategoryId": 19,
+    "L1CategoryName": "Privat",
+    "L2CategoryId": 1900,
+    "L3CategoryId": 190000,
+    "CategoryName": "Privat"
+  },
+  {
+    "L1CategoryId": 21,
+    "L1CategoryName": "Zinsen",
+    "L2CategoryId": 2118,
+    "L3CategoryId": 211800,
+    "CategoryName": "Zinsen auf Kontokorrent"
+  },
+  {
+    "L1CategoryId": 21,
+    "L1CategoryName": "Zinsen",
+    "L2CategoryId": 2120,
+    "L3CategoryId": 212000,
+    "CategoryName": "Zinsaufwendungen für langfristige Verbindlichkeiten"
+  },
+  {
+    "L1CategoryId": 40,
+    "L1CategoryName": "Medikamente und Praxisbedarf",
+    "L2CategoryId": 4000,
+    "L3CategoryId": 400010,
+    "CategoryName": "Medikamente Praxisbedarf"
+  },
+  {
+    "L1CategoryId": 40,
+    "L1CategoryName": "Medikamente und Praxisbedarf",
+    "L2CategoryId": 4020,
+    "L3CategoryId": 402000,
+    "CategoryName": "Praxismaterial"
+  },
+  {
+    "L1CategoryId": 41,
+    "L1CategoryName": "Dienstleistungen",
+    "L2CategoryId": 4120,
+    "L3CategoryId": 412005,
+    "CategoryName": "Kosten für Praxisvertretung"
+  },
+  {
+    "L1CategoryId": 41,
+    "L1CategoryName": "Dienstleistungen",
+    "L2CategoryId": 4138,
+    "L3CategoryId": 413800,
+    "CategoryName": "Beiträge zur Berufsgenossenschaft"
+  },
+  {
+    "L1CategoryId": 41,
+    "L1CategoryName": "Dienstleistungen",
+    "L2CategoryId": 4140,
+    "L3CategoryId": 414000,
+    "CategoryName": "Freiwillige soziale Aufwendungen"
+  },
+  {
+    "L1CategoryId": 41,
+    "L1CategoryName": "Dienstleistungen",
+    "L2CategoryId": 4152,
+    "L3CategoryId": 415200,
+    "CategoryName": "Sachzuwendungen und Dienstleistungen an Arbeitnehmer"
+  },
+  {
+    "L1CategoryId": 42,
+    "L1CategoryName": "Miete (incl. Nebenkosten)",
+    "L2CategoryId": 4210,
+    "L3CategoryId": 421000,
+    "CategoryName": "Miete"
+  },
+  {
+    "L1CategoryId": 42,
+    "L1CategoryName": "Miete (incl. Nebenkosten)",
+    "L2CategoryId": 4240,
+    "L3CategoryId": 424000,
+    "CategoryName": "Gas, Strom, Wasser"
+  },
+  {
+    "L1CategoryId": 42,
+    "L1CategoryName": "Miete (incl. Nebenkosten)",
+    "L2CategoryId": 4250,
+    "L3CategoryId": 425000,
+    "CategoryName": "Reinigung, Desinfektion"
+  },
+  {
+    "L1CategoryId": 43,
+    "L1CategoryName": "Versicherungen",
+    "L2CategoryId": 4360,
+    "L3CategoryId": 436010,
+    "CategoryName": "Berufshaftpflichtversicherung"
+  },
+  {
+    "L1CategoryId": 43,
+    "L1CategoryName": "Versicherungen",
+    "L2CategoryId": 4380,
+    "L3CategoryId": 438020,
+    "CategoryName": "Kammerbeiträge"
+  },
+  {
+    "L1CategoryId": 45,
+    "L1CategoryName": "Auto",
+    "L2CategoryId": 4510,
+    "L3CategoryId": 451000,
+    "CategoryName": "Kfz-Steuer"
+  },
+  {
+    "L1CategoryId": 45,
+    "L1CategoryName": "Auto",
+    "L2CategoryId": 4520,
+    "L3CategoryId": 452000,
+    "CategoryName": "Kfz-Versicherungen"
+  },
+  {
+    "L1CategoryId": 45,
+    "L1CategoryName": "Auto",
+    "L2CategoryId": 4530,
+    "L3CategoryId": 453000,
+    "CategoryName": "Kfz-Betriebskosten"
+  },
+  {
+    "L1CategoryId": 45,
+    "L1CategoryName": "Auto",
+    "L2CategoryId": 4540,
+    "L3CategoryId": 454000,
+    "CategoryName": "Kfz-Reparaturen"
+  },
+  {
+    "L1CategoryId": 45,
+    "L1CategoryName": "Auto",
+    "L2CategoryId": 4550,
+    "L3CategoryId": 455000,
+    "CategoryName": "Garagenmieten"
+  },
+  {
+    "L1CategoryId": 45,
+    "L1CategoryName": "Auto",
+    "L2CategoryId": 4580,
+    "L3CategoryId": 458000,
+    "CategoryName": "Sonstige Kfz-Kosten"
+  },
+  {
+    "L1CategoryId": 46,
+    "L1CategoryName": "Werbungskosten",
+    "L2CategoryId": 4600,
+    "L3CategoryId": 460000,
+    "CategoryName": "Werbekosten"
+  },
+  {
+    "L1CategoryId": 46,
+    "L1CategoryName": "Werbungskosten",
+    "L2CategoryId": 4630,
+    "L3CategoryId": 463000,
+    "CategoryName": "Geschenke abzugsfähige"
+  },
+  {
+    "L1CategoryId": 46,
+    "L1CategoryName": "Werbungskosten",
+    "L2CategoryId": 4635,
+    "L3CategoryId": 463500,
+    "CategoryName": "Geschenke nicht abzugsfähige"
+  },
+  {
+    "L1CategoryId": 46,
+    "L1CategoryName": "Werbungskosten",
+    "L2CategoryId": 4638,
+    "L3CategoryId": 463800,
+    "CategoryName": "Geschenke ausschließlich betrieblich genutzt"
+  },
+  {
+    "L1CategoryId": 48,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4800,
+    "L3CategoryId": 480010,
+    "CategoryName": "Instandhaltung Praxisgeräte"
+  },
+  {
+    "L1CategoryId": 48,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4806,
+    "L3CategoryId": 480600,
+    "CategoryName": "Wartungskosten für Hard- und Software"
+  },
+  {
+    "L1CategoryId": 48,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4810,
+    "L3CategoryId": 481000,
+    "CategoryName": "Miet- und Wartungsverträge Praxis"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4900,
+    "L3CategoryId": 490000,
+    "CategoryName": "Sonstiger Betriebsaufwand"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4910,
+    "L3CategoryId": 491000,
+    "CategoryName": "Porto"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4920,
+    "L3CategoryId": 492000,
+    "CategoryName": "Telefon"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4930,
+    "L3CategoryId": 493000,
+    "CategoryName": "Bürobedarf"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4945,
+    "L3CategoryId": 494510,
+    "CategoryName": "Fortbildungskosten/Arzt"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4945,
+    "L3CategoryId": 494520,
+    "CategoryName": "Konkress- und Seminarkosten Arbeitnehmer"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4957,
+    "L3CategoryId": 495700,
+    "CategoryName": "Abschluss- und Prüfungskosten"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4950,
+    "L3CategoryId": 495000,
+    "CategoryName": "Rechts- und Beratungskosten"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4955,
+    "L3CategoryId": 495500,
+    "CategoryName": "Buchführungskosten"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4945,
+    "L3CategoryId": 494550,
+    "CategoryName": "Fachliteratur"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4969,
+    "L3CategoryId": 496900,
+    "CategoryName": "Abfallbeseitigung"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4980,
+    "L3CategoryId": 498000,
+    "CategoryName": "Sonstiger Betriebsbedarf"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4980,
+    "L3CategoryId": 498015,
+    "CategoryName": "Berufsbekleidung, Praxiswäsche"
+  },
+  {
+    "L1CategoryId": 49,
+    "L1CategoryName": "Betriebsaufwände",
+    "L2CategoryId": 4980,
+    "L3CategoryId": 498020,
+    "CategoryName": "Wartezimmerlektüre"
+  },
+  {
+    "L1CategoryId": 81,
+    "L1CategoryName": "Primäre Einnahmen",
+    "L2CategoryId": 8100,
+    "L3CategoryId": 810010,
+    "CategoryName": "Kassenabrechnung (KV)"
+  },
+  {
+    "L1CategoryId": 81,
+    "L1CategoryName": "Primäre Einnahmen",
+    "L2CategoryId": 8100,
+    "L3CategoryId": 810050,
+    "CategoryName": "Privatabrechnung"
+  },
+  {
+    "L1CategoryId": 81,
+    "L1CategoryName": "Primäre Einnahmen",
+    "L2CategoryId": 8101,
+    "L3CategoryId": 810150,
+    "CategoryName": "Akupunktur (individuell angelegt)"
+  },
+  {
+    "L1CategoryId": 82,
+    "L1CategoryName": "Sonstige Einnahmen",
+    "L2CategoryId": 8200,
+    "L3CategoryId": 820010,
+    "CategoryName": "Vorträge, schriftstellerische Tätigkeiten"
+  },
+  {
+    "L1CategoryId": 84,
+    "L1CategoryName": "Sonstige Einnahmen",
+    "L2CategoryId": 8400,
+    "L3CategoryId": 840020,
+    "CategoryName": "Steuerpflichtige Gutachten 19% Ust"
+  },
+  {
+    "L1CategoryId": "04",
+    "L1CategoryName": "Kleine Anschaffungen",
+    "L2CategoryId": "0480",
+    "L3CategoryId": "048000",
+    "CategoryName": "Geringwertige Wirtschaftsgüter"
+  },
+  {
+    "L1CategoryId": "07",
+    "L1CategoryName": "Darlehen",
+    "L2CategoryId": "0720",
+    "L3CategoryId": "072000",
+    "CategoryName": "Praxisdarlehen"
+  }
+]

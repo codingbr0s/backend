@@ -25,4 +25,13 @@ export default (() => {
 
     });
 
+    router.post('/', (req: Request, res: Response) => {
+        const data = req.body;
+
+        const transaction = Object.assign({
+            timestamp: Date.now()
+        }, data);
+
+    });
+
 });

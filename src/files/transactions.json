@@ -1,10 +1,10 @@
 [
   {
-    "TransactionId": 1,
+    "transactid": 1,
     "BankAcctName": "Girokonto",
     "CategoryName": "Geringwertige Wirtschaftsgüter",
     "Debitor": "Schmidt",
-    "Creditor": "Amazon",
+    "creditor": "Amazon",
     "Counterparty": "Amazon",
     "Description": "Bestellung 123456",
     "Note": "Geringe Wirtschaftsgüter bis 250,00 EUR",
@@ -16,11 +16,11 @@
     "Opposing account (name)": "Amazon"
   },
   {
-    "TransactionId": 2,
+    "transactid": 2,
     "BankAcctName": "Girokonto",
     "CategoryName": "Bürobedarf",
     "Debitor": "Schmidt",
-    "Creditor": "Amazon",
+    "creditor": "Amazon",
     "Counterparty": "Amazon",
     "Description": "(blank)",
     "Note": "Bürobedarf",
@@ -32,11 +32,11 @@
     "Opposing account (name)": "Amazon"
   },
   {
-    "TransactionId": 2,
+    "transactid": 2,
     "BankAcctName": "Girokonto",
     "CategoryName": "Fachliteratur",
     "Debitor": "Schmidt",
-    "Creditor": "Amazon",
+    "creditor": "Amazon",
     "Counterparty": "Amazon",
     "Description": "(blank)",
     "Note": "Fachliteratur",
@@ -48,11 +48,11 @@
     "Opposing account (name)": "Amazon"
   },
   {
-    "TransactionId": 3,
+    "transactid": 3,
     "BankAcctName": "Girokonto",
     "CategoryName": "Zinsaufwendungen für langfristige Verbindlichkeiten",
     "Debitor": "Schmidt",
-    "Creditor": "apoBank",
+    "creditor": "apoBank",
     "Counterparty": "apoBank",
     "Description": "(blank)",
     "Note": "Praxisfinanzierung/Zinsen",
@@ -64,11 +64,11 @@
     "Opposing account (name)": "apoBank"
   },
   {
-    "TransactionId": 4,
+    "transactid": 4,
     "BankAcctName": "Girokonto",
     "CategoryName": "Zinsen auf Kontokorrent",
     "Debitor": "Schmidt",
-    "Creditor": "apoBank",
+    "creditor": "apoBank",
     "Counterparty": "apoBank",
     "Description": "(blank)",
     "Note": "Schuldzinsen/betriebliches Girokonto",
@@ -80,11 +80,11 @@
     "Opposing account (name)": "apoBank"
   },
   {
-    "TransactionId": 5,
+    "transactid": 5,
     "BankAcctName": "Girokonto",
     "CategoryName": "Praxisdarlehen",
     "Debitor": "Schmidt",
-    "Creditor": "apoBank",
+    "creditor": "apoBank",
     "Counterparty": "apoBank",
     "Description": "(blank)",
     "Note": "Praxisfinanzierung/Tilgung",
@@ -96,11 +96,11 @@
     "Opposing account (name)": "apoBank"
   },
   {
-    "TransactionId": 6,
+    "transactid": 6,
     "BankAcctName": "Girokonto",
     "CategoryName": "Verbindlichkeiten aus Vermögensbildung",
     "Debitor": "Schmidt",
-    "Creditor": "apoVermögensbildung",
+    "creditor": "apoVermögensbildung",
     "Counterparty": "apoVermögensbildung",
     "Description": "(blank)",
     "Note": "Löhne",
@@ -112,11 +112,11 @@
     "Opposing account (name)": "apoVermögensbildung"
   },
   {
-    "TransactionId": 9,
+    "transactid": 9,
     "BankAcctName": "Girokonto",
     "CategoryName": "Kammerbeiträge",
     "Debitor": "Schmidt",
-    "Creditor": "Ärztekammer",
+    "creditor": "Ärztekammer",
     "Counterparty": "Ärztekammer",
     "Description": "(blank)",
     "Note": "Kammerbeiträge",
@@ -128,11 +128,11 @@
     "Opposing account (name)": "Ärztekammer"
   },
   {
-    "TransactionId": 10,
+    "transactid": 10,
     "BankAcctName": "Girokonto",
     "CategoryName": "Beiträge zur Berufsgenossenschaft",
     "Debitor": "Schmidt",
-    "Creditor": "Berufsgenossenschaft für Gesundheitsdienst und Wohlfahrtspflege",
+    "creditor": "Berufsgenossenschaft für Gesundheitsdienst und Wohlfahrtspflege",
     "Counterparty": "Berufsgenossenschaft für Gesundheitsdienst und Wohlfahrtspflege",
     "Description": "(blank)",
     "Note": "Berufsgenossenschaft",
@@ -144,11 +144,11 @@
     "Opposing account (name)": "Berufsgenossenschaft für Gesundheitsdienst und Wohlfahrtspflege"
   },
   {
-    "TransactionId": 11,
+    "transactid": 11,
     "BankAcctName": "Girokonto",
     "CategoryName": "Verbindlichkeiten Lohn und Kirchensteuer",
     "Debitor": "Schmidt",
-    "Creditor": "Betriebsstättenfinanzamt Düsseldorf-Süd",
+    "creditor": "Betriebsstättenfinanzamt Düsseldorf-Süd",
     "Counterparty": "Betriebsstättenfinanzamt Düsseldorf-Süd",
     "Description": "(blank)",
     "Note": "Löhne",
@@ -160,11 +160,11 @@
     "Opposing account (name)": "Betriebsstättenfinanzamt Düsseldorf-Süd"
   },
   {
-    "TransactionId": 14,
+    "transactid": 14,
     "BankAcctName": "Girokonto",
     "CategoryName": "Berufshaftpflichtversicherung",
     "Debitor": "Schmidt",
-    "Creditor": "DÄV Versicherung",
+    "creditor": "DÄV Versicherung",
     "Counterparty": "DÄV Versicherung",
     "Description": "(blank)",
     "Note": "Berufshaftpflichtversicherung",
@@ -176,11 +176,11 @@
     "Opposing account (name)": "DÄV Versicherung"
   },
   {
-    "TransactionId": 14,
+    "transactid": 14,
     "BankAcctName": "Girokonto",
     "CategoryName": "Haftpflichtversicherung",
     "Debitor": "Schmidt",
-    "Creditor": "DÄV Versicherung",
+    "creditor": "DÄV Versicherung",
     "Counterparty": "DÄV Versicherung",
     "Description": "(blank)",
     "Note": "Haftpflichtversicherungsbeiträge",
@@ -192,11 +192,11 @@
     "Opposing account (name)": "DÄV Versicherung"
   },
   {
-    "TransactionId": 14,
+    "transactid": 14,
     "BankAcctName": "Girokonto",
     "CategoryName": "Lebensversicherungen",
     "Debitor": "Schmidt",
-    "Creditor": "DÄV Versicherung",
+    "creditor": "DÄV Versicherung",
     "Counterparty": "DÄV Versicherung",
     "Description": "(blank)",
     "Note": "Lebensversicherungsbeiträge",
@@ -208,11 +208,11 @@
     "Opposing account (name)": "DÄV Versicherung"
   },
   {
-    "TransactionId": 14,
+    "transactid": 14,
     "BankAcctName": "Girokonto",
     "CategoryName": "Sonderausgaben beschränkt abzugsfähige",
     "Debitor": "Schmidt",
-    "Creditor": "DÄV Versicherung",
+    "creditor": "DÄV Versicherung",
     "Counterparty": "DÄV Versicherung",
     "Description": "(blank)",
     "Note": "Rentenversicherungsbeiträge/private Altersvorsorge",
@@ -224,11 +224,11 @@
     "Opposing account (name)": "DÄV Versicherung"
   },
   {
-    "TransactionId": 16,
+    "transactid": 16,
     "BankAcctName": "Girokonto",
     "CategoryName": "Rechts- und Beratungskosten",
     "Debitor": "Schmidt",
-    "Creditor": "Eintreiber Emil",
+    "creditor": "Eintreiber Emil",
     "Counterparty": "Eintreiber Emil",
     "Description": "(blank)",
     "Note": "Rechtsberatungskosten",
@@ -240,11 +240,11 @@
     "Opposing account (name)": "Eintreiber Emil"
   },
   {
-    "TransactionId": 17,
+    "transactid": 17,
     "BankAcctName": "Girokonto",
     "CategoryName": "Verbindlichkeiten aus Lohn und Gehalt",
     "Debitor": "Schmidt",
-    "Creditor": "Empfangs Erika",
+    "creditor": "Empfangs Erika",
     "Counterparty": "Empfangs Erika",
     "Description": "(blank)",
     "Note": "Löhne",
@@ -256,11 +256,11 @@
     "Opposing account (name)": "Empfangs Erika"
   },
   {
-    "TransactionId": 17,
+    "transactid": 17,
     "BankAcctName": "Girokonto",
     "CategoryName": "Verbindlichkeiten aus Lohn und Gehalt",
     "Debitor": "Schmidt",
-    "Creditor": "Frau Schmidt",
+    "creditor": "Frau Schmidt",
     "Counterparty": "Frau Schmidt",
     "Description": "(blank)",
     "Note": "Löhne",
@@ -272,11 +272,11 @@
     "Opposing account (name)": "Frau Schmidt"
   },
   {
-    "TransactionId": 17,
+    "transactid": 17,
     "BankAcctName": "Girokonto",
     "CategoryName": "Verbindlichkeiten aus Lohn und Gehalt",
     "Debitor": "Schmidt",
-    "Creditor": "Helferin Hanna",
+    "creditor": "Helferin Hanna",
     "Counterparty": "Helferin Hanna",
     "Description": "(blank)",
     "Note": "Löhne",
@@ -288,11 +288,11 @@
     "Opposing account (name)": "Helferin Hanna"
   },
   {
-    "TransactionId": 17,
+    "transactid": 17,
     "BankAcctName": "Girokonto",
     "CategoryName": "Verbindlichkeiten aus Lohn und Gehalt",
     "Debitor": "Schmidt",
-    "Creditor": "Labor Lisa",
+    "creditor": "Labor Lisa",
     "Counterparty": "Labor Lisa",
     "Description": "(blank)",
     "Note": "Löhne",
@@ -304,11 +304,11 @@
     "Opposing account (name)": "Labor Lisa"
   },
   {
-    "TransactionId": 19,
+    "transactid": 19,
     "BankAcctName": "Girokonto",
     "CategoryName": "Kfz-Steuer",
     "Debitor": "Schmidt",
-    "Creditor": "Finanzkasse Düsseldorf",
+    "creditor": "Finanzkasse Düsseldorf",
     "Counterparty": "Finanzkasse Düsseldorf",
     "Description": "(blank)",
     "Note": "Kfz/Steuer",
@@ -320,11 +320,11 @@
     "Opposing account (name)": "Finanzkasse Düsseldorf"
   },
   {
-    "TransactionId": 20,
+    "transactid": 20,
     "BankAcctName": "Girokonto",
     "CategoryName": "Garagenmieten",
     "Debitor": "Schmidt",
-    "Creditor": "Garagen-Gerda (DirectDebit)",
+    "creditor": "Garagen-Gerda (DirectDebit)",
     "Counterparty": "Garagen-Gerda (DirectDebit)",
     "Description": "(blank)",
     "Note": "Kfz/Garagenmiete",
@@ -336,11 +336,11 @@
     "Opposing account (name)": "Garagen-Gerda (DirectDebit)"
   },
   {
-    "TransactionId": 21,
+    "transactid": 21,
     "BankAcctName": "Girokonto",
     "CategoryName": "Werbekosten",
     "Debitor": "Schmidt",
-    "Creditor": "google Adwords",
+    "creditor": "google Adwords",
     "Counterparty": "google Adwords",
     "Description": "(blank)",
     "Note": "Werbeanzeigen",
@@ -352,11 +352,11 @@
     "Opposing account (name)": "google Adwords"
   },
   {
-    "TransactionId": 22,
+    "transactid": 22,
     "BankAcctName": "Girokonto",
     "CategoryName": "Reinigung, Desinfektion",
     "Debitor": "Schmidt",
-    "Creditor": "Helpling.de",
+    "creditor": "Helpling.de",
     "Counterparty": "Helpling.de",
     "Description": "(blank)",
     "Note": "Reinigung",
@@ -368,11 +368,11 @@
     "Opposing account (name)": "Helpling.de"
   },
   {
-    "TransactionId": 23,
+    "transactid": 23,
     "BankAcctName": "Girokonto",
     "CategoryName": "Praxismaterial",
     "Debitor": "Schmidt",
-    "Creditor": "Hermal Praxisbedarf",
+    "creditor": "Hermal Praxisbedarf",
     "Counterparty": "Hermal Praxisbedarf",
     "Description": "(blank)",
     "Note": "Praxisbedarf",
@@ -384,11 +384,11 @@
     "Opposing account (name)": "Hermal Praxisbedarf"
   },
   {
-    "TransactionId": 24,
+    "transactid": 24,
     "BankAcctName": "Girokonto",
     "CategoryName": "Kfz-Reparaturen",
     "Debitor": "Schmidt",
-    "Creditor": "JP Krämer",
+    "creditor": "JP Krämer",
     "Counterparty": "JP Krämer",
     "Description": "(blank)",
     "Note": "Kfz/Reparaturen",
@@ -400,11 +400,11 @@
     "Opposing account (name)": "JP Krämer"
   },
   {
-    "TransactionId": 25,
+    "transactid": 25,
     "BankAcctName": "Girokonto",
     "CategoryName": "Vorträge, schriftstellerische Tätigkeiten",
     "Debitor": "Krankenhaus Düsseldorf",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "Krankenhaus Düsseldorf",
     "Description": "(blank)",
     "Note": "Krankenhaushonorar",
@@ -416,11 +416,11 @@
     "Opposing account (name)": "Krankenhaus Düsseldorf"
   },
   {
-    "TransactionId": 26,
+    "transactid": 26,
     "BankAcctName": "Girokonto",
     "CategoryName": "Kassenabrechnung (KV)",
     "Debitor": "KV Nordrhein",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "KV Nordrhein",
     "Description": "(blank)",
     "Note": "KV-Abrechnung, Abschlagszahlung",
@@ -432,11 +432,11 @@
     "Opposing account (name)": "KV Nordrhein"
   },
   {
-    "TransactionId": 27,
+    "transactid": 27,
     "BankAcctName": "Girokonto",
     "CategoryName": "Kassenabrechnung (KV)",
     "Debitor": "KV Nordrhein",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "KV Nordrhein",
     "Description": "(blank)",
     "Note": "KV-Abrechnung, Abschlusszahlung",
@@ -448,11 +448,11 @@
     "Opposing account (name)": "KV Nordrhein"
   },
   {
-    "TransactionId": 28,
+    "transactid": 28,
     "BankAcctName": "Girokonto",
     "CategoryName": "Wartezimmerlektüre",
     "Debitor": "Schmidt",
-    "Creditor": "Lesezirkel",
+    "creditor": "Lesezirkel",
     "Counterparty": "Lesezirkel",
     "Description": "(blank)",
     "Note": "Wartezimmerlektüre",
@@ -464,11 +464,11 @@
     "Opposing account (name)": "Lesezirkel"
   },
   {
-    "TransactionId": 29,
+    "transactid": 29,
     "BankAcctName": "Girokonto",
     "CategoryName": "Miete",
     "Debitor": "Schmidt",
-    "Creditor": "Ludwig Landlord",
+    "creditor": "Ludwig Landlord",
     "Counterparty": "Ludwig Landlord",
     "Description": "(blank)",
     "Note": "Miete/Ausschließlich für Praxis",
@@ -480,11 +480,11 @@
     "Opposing account (name)": "Ludwig Landlord"
   },
   {
-    "TransactionId": 30,
+    "transactid": 30,
     "BankAcctName": "Girokonto",
     "CategoryName": "Privatabrechnung",
     "Debitor": "MediServ",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "MediServ",
     "Description": "(blank)",
     "Note": "Liquidation privatärztliches Honorar über privatärztliche Verrechnungsstelle/Honorarabtretung",
@@ -496,11 +496,11 @@
     "Opposing account (name)": "MediServ"
   },
   {
-    "TransactionId": 31,
+    "transactid": 31,
     "BankAcctName": "Girokonto",
     "CategoryName": "Instandhaltung Praxisgeräte",
     "Debitor": "Schmidt",
-    "Creditor": "Medizinisch-technischer Kundendienst",
+    "creditor": "Medizinisch-technischer Kundendienst",
     "Counterparty": "Medizinisch-technischer Kundendienst",
     "Description": "(blank)",
     "Note": "Instandhaltung Praxisgeräte",
@@ -512,11 +512,11 @@
     "Opposing account (name)": "Medizinisch-technischer Kundendienst"
   },
   {
-    "TransactionId": 32,
+    "transactid": 32,
     "BankAcctName": "Girokonto",
     "CategoryName": "Sonstiger Betriebsaufwand",
     "Debitor": "Schmidt",
-    "Creditor": "Monster.de",
+    "creditor": "Monster.de",
     "Counterparty": "Monster.de",
     "Description": "(blank)",
     "Note": "Personal/Personalsuche",
@@ -528,11 +528,11 @@
     "Opposing account (name)": "Monster.de"
   },
   {
-    "TransactionId": 33,
+    "transactid": 33,
     "BankAcctName": "Girokonto",
     "CategoryName": "Miet- und Wartungsverträge Praxis",
     "Debitor": "Schmidt",
-    "Creditor": "NaonITServices (Kopierer)",
+    "creditor": "NaonITServices (Kopierer)",
     "Counterparty": "NaonITServices (Kopierer)",
     "Description": "(blank)",
     "Note": "Gerätemiete",
@@ -544,11 +544,11 @@
     "Opposing account (name)": "NaonITServices (Kopierer)"
   },
   {
-    "TransactionId": 34,
+    "transactid": 34,
     "BankAcctName": "Girokonto",
     "CategoryName": "Fortbildungskosten/Arzt",
     "Debitor": "Schmidt",
-    "Creditor": "NaonTeach (Akupunkturschulung)",
+    "creditor": "NaonTeach (Akupunkturschulung)",
     "Counterparty": "NaonTeach (Akupunkturschulung)",
     "Description": "(blank)",
     "Note": "Fortbildungskosten/Arzt",
@@ -560,11 +560,11 @@
     "Opposing account (name)": "NaonTeach (Akupunkturschulung)"
   },
   {
-    "TransactionId": 36,
+    "transactid": 36,
     "BankAcctName": "Girokonto",
     "CategoryName": "Akupunktur (individuell angelegt)",
     "Debitor": "Patient Norbert Nagel",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "Patient Norbert Nagel",
     "Description": "(blank)",
     "Note": "Privatliquidation; individuelle Gesundheitsleistung (IGel-Leistung)",
@@ -576,11 +576,11 @@
     "Opposing account (name)": "Patient Norbert Nagel"
   },
   {
-    "TransactionId": 37,
+    "transactid": 37,
     "BankAcctName": "Girokonto",
     "CategoryName": "Steuerpflichtige Gutachten 19% Ust",
     "Debitor": "Patientin Rita Reha",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "Patientin Rita Reha",
     "Description": "(blank)",
     "Note": "Berufsgenossenschaft",
@@ -592,11 +592,11 @@
     "Opposing account (name)": "Patientin Rita Reha"
   },
   {
-    "TransactionId": 38,
+    "transactid": 38,
     "BankAcctName": "Girokonto",
     "CategoryName": "Wartungskosten für Hard- und Software",
     "Debitor": "Schmidt",
-    "Creditor": "PCV Software",
+    "creditor": "PCV Software",
     "Counterparty": "PCV Software",
     "Description": "(blank)",
     "Note": "Software-Wartungsvertrag",
@@ -608,11 +608,11 @@
     "Opposing account (name)": "PCV Software"
   },
   {
-    "TransactionId": 39,
+    "transactid": 39,
     "BankAcctName": "Girokonto",
     "CategoryName": "(blank)",
     "Debitor": "Pharmaunternehmen X",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "Pharmaunternehmen X",
     "Description": "(blank)",
     "Note": "Schritstellerische Tätigkeit",
@@ -624,11 +624,11 @@
     "Opposing account (name)": "Pharmaunternehmen X"
   },
   {
-    "TransactionId": 40,
+    "transactid": 40,
     "BankAcctName": "Girokonto",
     "CategoryName": "Privatabrechnung",
     "Debitor": "Privatärztliche Verrechnungsstelle",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "Privatärztliche Verrechnungsstelle",
     "Description": "(blank)",
     "Note": "Liquidation privatärztliches Honorar über privatärztliche Verrechnungsstelle/Grundfall",
@@ -640,11 +640,11 @@
     "Opposing account (name)": "Privatärztliche Verrechnungsstelle"
   },
   {
-    "TransactionId": 41,
+    "transactid": 41,
     "BankAcctName": "Girokonto",
     "CategoryName": "Kfz-Versicherungen",
     "Debitor": "Schmidt",
-    "Creditor": "R+V Versicherung",
+    "creditor": "R+V Versicherung",
     "Counterparty": "R+V Versicherung",
     "Description": "(blank)",
     "Note": "Kfg/Versicherung",
@@ -656,11 +656,11 @@
     "Opposing account (name)": "R+V Versicherung"
   },
   {
-    "TransactionId": 41,
+    "transactid": 41,
     "BankAcctName": "Girokonto",
     "CategoryName": "Unfallversicherung",
     "Debitor": "Schmidt",
-    "Creditor": "R+V Versicherung",
+    "creditor": "R+V Versicherung",
     "Counterparty": "R+V Versicherung",
     "Description": "(blank)",
     "Note": "Unfallversicherungsbeiträge",
@@ -672,11 +672,11 @@
     "Opposing account (name)": "R+V Versicherung"
   },
   {
-    "TransactionId": 42,
+    "transactid": 42,
     "BankAcctName": "Girokonto",
     "CategoryName": "Berufsbekleidung, Praxiswäsche",
     "Debitor": "Schmidt",
-    "Creditor": "Reinigung Rheingold",
+    "creditor": "Reinigung Rheingold",
     "Counterparty": "Reinigung Rheingold",
     "Description": "(blank)",
     "Note": "Berufskleidung",
@@ -688,11 +688,11 @@
     "Opposing account (name)": "Reinigung Rheingold"
   },
   {
-    "TransactionId": 44,
+    "transactid": 44,
     "BankAcctName": "Girokonto",
     "CategoryName": "Verbindlichkeiten soziale Sicherheit",
     "Debitor": "Schmidt",
-    "Creditor": "Sozialkasse X",
+    "creditor": "Sozialkasse X",
     "Counterparty": "Sozialkasse X",
     "Description": "(blank)",
     "Note": "Löhne",
@@ -704,11 +704,11 @@
     "Opposing account (name)": "Sozialkasse X"
   },
   {
-    "TransactionId": 45,
+    "transactid": 45,
     "BankAcctName": "Girokonto",
     "CategoryName": "Abfallbeseitigung",
     "Debitor": "Schmidt",
-    "Creditor": "Städische Abfallwirtschaft",
+    "creditor": "Städische Abfallwirtschaft",
     "Counterparty": "Städische Abfallwirtschaft",
     "Description": "(blank)",
     "Note": "Abfallbeseitigung/Sondermüllentsorgung",
@@ -720,11 +720,11 @@
     "Opposing account (name)": "Städische Abfallwirtschaft"
   },
   {
-    "TransactionId": 46,
+    "transactid": 46,
     "BankAcctName": "Girokonto",
     "CategoryName": "Abschluss- und Prüfungskosten",
     "Debitor": "Schmidt",
-    "Creditor": "Steuer-Stefan",
+    "creditor": "Steuer-Stefan",
     "Counterparty": "Steuer-Stefan",
     "Description": "(blank)",
     "Note": "Jahresabschlusskosten",
@@ -736,11 +736,11 @@
     "Opposing account (name)": "Steuer-Stefan"
   },
   {
-    "TransactionId": 46,
+    "transactid": 46,
     "BankAcctName": "Girokonto",
     "CategoryName": "Buchführungskosten",
     "Debitor": "Schmidt",
-    "Creditor": "Steuer-Stefan",
+    "creditor": "Steuer-Stefan",
     "Counterparty": "Steuer-Stefan",
     "Description": "(blank)",
     "Note": "Buchführungskosten",
@@ -752,11 +752,11 @@
     "Opposing account (name)": "Steuer-Stefan"
   },
   {
-    "TransactionId": 47,
+    "transactid": 47,
     "BankAcctName": "Girokonto",
     "CategoryName": "Telefon",
     "Debitor": "Schmidt",
-    "Creditor": "Telekom",
+    "creditor": "Telekom",
     "Counterparty": "Telekom",
     "Description": "(blank)",
     "Note": "Telefon/Festnetz",
@@ -768,11 +768,11 @@
     "Opposing account (name)": "Telekom"
   },
   {
-    "TransactionId": 48,
+    "transactid": 48,
     "BankAcctName": "Girokonto",
     "CategoryName": "Medikamente Praxisbedarf",
     "Debitor": "Schmidt",
-    "Creditor": "Tor-Apotheke",
+    "creditor": "Tor-Apotheke",
     "Counterparty": "Tor-Apotheke",
     "Description": "(blank)",
     "Note": "Medikamente für den Praxisbedarf",
@@ -784,11 +784,11 @@
     "Opposing account (name)": "Tor-Apotheke"
   },
   {
-    "TransactionId": 49,
+    "transactid": 49,
     "BankAcctName": "Girokonto",
     "CategoryName": "Kosten für Praxisvertretung",
     "Debitor": "Schmidt",
-    "Creditor": "Vertretungs-Vroni",
+    "creditor": "Vertretungs-Vroni",
     "Counterparty": "Vertretungs-Vroni",
     "Description": "(blank)",
     "Note": "Praxisvertretung",
@@ -800,11 +800,11 @@
     "Opposing account (name)": "Vertretungs-Vroni"
   },
   {
-    "TransactionId": 50,
+    "transactid": 50,
     "BankAcctName": "Girokonto",
     "CategoryName": "Telefon",
     "Debitor": "Schmidt",
-    "Creditor": "Vodafone",
+    "creditor": "Vodafone",
     "Counterparty": "Vodafone",
     "Description": "(blank)",
     "Note": "Telefon/Handy",
@@ -816,11 +816,11 @@
     "Opposing account (name)": "Vodafone"
   },
   {
-    "TransactionId": 50,
+    "transactid": 50,
     "BankAcctName": "Girokonto",
     "CategoryName": "Telefon",
     "Debitor": "Schmidt",
-    "Creditor": "Vodafone",
+    "creditor": "Vodafone",
     "Counterparty": "Vodafone",
     "Description": "(blank)",
     "Note": "Telefon/Mitarbeiter",
@@ -832,11 +832,11 @@
     "Opposing account (name)": "Vodafone"
   },
   {
-    "TransactionId": 2,
+    "transactid": 2,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Freiwillige soziale Aufwendungen",
     "Debitor": "Schmidt",
-    "Creditor": "Amazon",
+    "creditor": "Amazon",
     "Counterparty": "Amazon",
     "Description": "(blank)",
     "Note": "Personal/Geburtstagsgeschenk",
@@ -848,11 +848,11 @@
     "Opposing account (name)": "Amazon"
   },
   {
-    "TransactionId": 2,
+    "transactid": 2,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Geschenke abzugsfähige",
     "Debitor": "Schmidt",
-    "Creditor": "Amazon",
+    "creditor": "Amazon",
     "Counterparty": "Amazon",
     "Description": "(blank)",
     "Note": "Geschenke/abzugsfähige",
@@ -864,11 +864,11 @@
     "Opposing account (name)": "Amazon"
   },
   {
-    "TransactionId": 2,
+    "transactid": 2,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Geschenke nicht abzugsfähige",
     "Debitor": "Schmidt",
-    "Creditor": "Amazon",
+    "creditor": "Amazon",
     "Counterparty": "Amazon",
     "Description": "(blank)",
     "Note": "Geschenke/nicht abzugsfähige",
@@ -880,11 +880,11 @@
     "Opposing account (name)": "Amazon"
   },
   {
-    "TransactionId": 7,
+    "transactid": 7,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Kfz-Betriebskosten",
     "Debitor": "Schmidt",
-    "Creditor": "Aral",
+    "creditor": "Aral",
     "Counterparty": "Aral",
     "Description": "(blank)",
     "Note": "Kfz/Betriebskosten",
@@ -896,11 +896,11 @@
     "Opposing account (name)": "Aral"
   },
   {
-    "TransactionId": 8,
+    "transactid": 8,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Sonstiger Betriebsbedarf",
     "Debitor": "Schmidt",
-    "Creditor": "Ärzte ohne Grenzen e.V.",
+    "creditor": "Ärzte ohne Grenzen e.V.",
     "Counterparty": "Ärzte ohne Grenzen e.V.",
     "Description": "(blank)",
     "Note": "Spenden",
@@ -912,11 +912,11 @@
     "Opposing account (name)": "Ärzte ohne Grenzen e.V."
   },
   {
-    "TransactionId": 12,
+    "transactid": 12,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Geschenke nicht abzugsfähige",
     "Debitor": "Schmidt",
-    "Creditor": "Bloomon-Shop",
+    "creditor": "Bloomon-Shop",
     "Counterparty": "Bloomon-Shop",
     "Description": "(blank)",
     "Note": "Geschenke/nicht abzugsfähige/Beerdigung Patient",
@@ -928,11 +928,11 @@
     "Opposing account (name)": "Bloomon-Shop"
   },
   {
-    "TransactionId": 13,
+    "transactid": 13,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Geschenke ausschließlich betrieblich genutzt",
     "Debitor": "Schmidt",
-    "Creditor": "Burberry",
+    "creditor": "Burberry",
     "Counterparty": "Burberry",
     "Description": "(blank)",
     "Note": "Geschenke/abzugsfähige",
@@ -944,11 +944,11 @@
     "Opposing account (name)": "Burberry"
   },
   {
-    "TransactionId": 15,
+    "transactid": 15,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Porto",
     "Debitor": "Schmidt",
-    "Creditor": "DHL online",
+    "creditor": "DHL online",
     "Counterparty": "DHL online",
     "Description": "(blank)",
     "Note": "Porto",
@@ -960,11 +960,11 @@
     "Opposing account (name)": "DHL online"
   },
   {
-    "TransactionId": 18,
+    "transactid": 18,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Sonstige Kfz-Kosten",
     "Debitor": "Schmidt",
-    "Creditor": "evoPark",
+    "creditor": "evoPark",
     "Counterparty": "evoPark",
     "Description": "(blank)",
     "Note": "Kfz/Parkgebühren",
@@ -976,11 +976,11 @@
     "Opposing account (name)": "evoPark"
   },
   {
-    "TransactionId": 43,
+    "transactid": 43,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Privat",
     "Debitor": "Schmidt",
-    "Creditor": "Restaurant zur Linde",
+    "creditor": "Restaurant zur Linde",
     "Counterparty": "Restaurant zur Linde",
     "Description": "(blank)",
     "Note": "Bewirtung",
@@ -992,11 +992,11 @@
     "Opposing account (name)": "Restaurant zur Linde"
   },
   {
-    "TransactionId": 43,
+    "transactid": 43,
     "BankAcctName": "Kreditkarte",
     "CategoryName": "Sachzuwendungen und Dienstleistungen an Arbeitnehmer",
     "Debitor": "Schmidt",
-    "Creditor": "Restaurant zur Linde",
+    "creditor": "Restaurant zur Linde",
     "Counterparty": "Restaurant zur Linde",
     "Description": "(blank)",
     "Note": "Bewirtung",
@@ -1008,11 +1008,11 @@
     "Opposing account (name)": "Restaurant zur Linde"
   },
   {
-    "TransactionId": 35,
+    "transactid": 35,
     "BankAcctName": "Rechnungskonto",
     "CategoryName": "Privatabrechnung",
     "Debitor": "Patient Max Meier",
-    "Creditor": "Schmidt",
+    "creditor": "Schmidt",
     "Counterparty": "Patient Max Meier",
     "Description": "(blank)",
     "Note": "Privatärztliches Honorar selbst abgerechnet und abgewickelt",
