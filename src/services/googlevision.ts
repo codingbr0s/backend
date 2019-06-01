@@ -14,21 +14,21 @@ const client = new vision.ImageAnnotatorClient({
 
 export function parseImage(img: Buffer): Promise<IWordWithConfidence[]> {
 
-    return new Promise(((resolve) => {
-        const json = JSON.parse(fs.readFileSync('output.json').toString());
-        resolve(getWordsWithConfidence(json[0].fullTextAnnotation));
-    }));
+    // return new Promise(((resolve) => {
+    //     const json = JSON.parse(fs.readFileSync('output.json').toString());
+    //     resolve(getWordsWithConfidence(json[0].fullTextAnnotation));
+    // }));
 
-    // return client
-    //     .documentTextDetection(img)
-    //     .then((results: any) => {
-    //         if (results.length > 0) {
-    //             getWordsWithConfidence(results);
-    //         }
-    //     })
-    //     .catch((err: any) => {
-    //         console.error('ERROR:', err);
-    //     });
+    return client
+        .documentTextDetection(img)
+        .then((results: any) => {
+            if (results.length > 0) {
+                return getWordsWithConfidence(results[0].fullTextAnnotation);
+            }
+        })
+        .catch((err: any) => {
+            console.error('ERROR:', err);
+        });
 }
 
 function getWordsWithConfidence(fullTestAnnotation: any): IWordWithConfidence[] {
