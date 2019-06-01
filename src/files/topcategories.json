@@ -1,19 +1,19 @@
-[
-  { "topCategoryId": 17, "topCategoryName": "Lohnzahlungen" },
-  { "topCategoryId": 18, "topCategoryName": "Versicherungen" },
-  { "topCategoryId": 19, "topCategoryName": "Privat" },
-  { "topCategoryId": 21, "topCategoryName": "Zinsen" },
-  { "topCategoryId": 40, "topCategoryName": "Medikamente und Praxisbedarf" },
-  { "topCategoryId": 41, "topCategoryName": "Dienstleistungen" },
-  { "topCategoryId": 42, "topCategoryName": "Miete (incl. Nebenkosten)" },
-  { "topCategoryId": 43, "topCategoryName": "Versicherungen" },
-  { "topCategoryId": 45, "topCategoryName": "Auto" },
-  { "topCategoryId": 46, "topCategoryName": "Werbungskosten" },
-  { "topCategoryId": 48, "topCategoryName": "Betriebsaufwände" },
-  { "topCategoryId": 49, "topCategoryName": "Betriebsaufwände" },
-  { "topCategoryId": 81, "topCategoryName": "Primäre Einnahmen" },
-  { "topCategoryId": 82, "topCategoryName": "Sonstige Einnahmen" },
-  { "topCategoryId": 84, "topCategoryName": "Sonstige Einnahmen" },
-  { "topCategoryId": 4, "topCategoryName": "Kleine Anschaffungen" },
-  { "topCategoryId": 7, "topCategoryName": "Darlehen" }
-]
+{
+ 17:'Lohnzahlungen',
+ 18:'Versicherungen',
+ 19:'Privat',
+ 21:'Zinsen',
+ 40:'Medikamente und Praxisbedarf',
+ 41:'Dienstleistungen',
+ 42:'Miete (incl. Nebenkosten)',
+ 43:'Versicherungen',
+ 45:'Auto',
+ 46:'Werbungskosten',
+ 48:'Betriebsaufwände',
+ 49:'Betriebsaufwände',
+ 81:'Primäre Einnahmen',
+ 82:'Sonstige Einnahmen',
+ 84:'Sonstige Einnahmen',
+ 04:'Kleine Anschaffungen',
+ 07:'Darlehen' 
+}
