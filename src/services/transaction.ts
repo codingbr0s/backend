@@ -39,3 +39,4 @@ fs.readFile('./src/files/topcategories.json', (err, data) => {
 export function sumUpCategories() {
     const categories = Object.assign({}, topCategories);
 }
+
