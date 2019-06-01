@@ -10,7 +10,7 @@ export default (() => {
 
     router.get('/', (req: Request, res: Response, next: NextFunction) => {
         res.type('application/json');
-        res.json(transactions);
+        res.json({});
     });
 
     router.get('/:id', (req: Request, res: Response, next: NextFunction) => {
