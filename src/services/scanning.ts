@@ -11,7 +11,7 @@ export function scanImageAndMatch(img: Buffer): Promise<any> {
     });
 }
 
-function matchToKnown(words: IWordWithConfidence[]): Buffer {
+function matchToKnown(words: IWordWithConfidence[]): any {
     const filtered = _.filter(words, (word: IWordWithConfidence) => {
         return _.some(knownImages, (known: IKnownImage) => {
             return _.some(known.fixwords, (fixword: string) => {
@@ -22,11 +22,9 @@ function matchToKnown(words: IWordWithConfidence[]): Buffer {
 
     const maxConf = _.maxBy(filtered, (val) => val.confidence);
 
-    const matches: IKnownImage = _.filter(knownImages, (known: IKnownImage) => {
+    return _.filter(knownImages, (known: IKnownImage) => {
         return _.some(known.fixwords, (fixword: string) => {
             return fixword.toLowerCase() === maxConf.text.toLowerCase();
         });
     })[0];
-
-    return Buffer.from(matches.base64, 'base64');
 }
