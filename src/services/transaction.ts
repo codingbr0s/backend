@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 import {ICategory, ISubCategory} from '../common';
 import logger from '../util/winston';
 
-let transactions:any;
+let transactions: any;
 let topCategories: { [k: string]: ICategory };
 
 fs.readFile('./src/files/transactions.json', (err, data) => {
@@ -45,4 +45,3 @@ export function sumUpCategories() {
 
     return categories;
 }
-
