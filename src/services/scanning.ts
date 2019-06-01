@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {IKnownImage, IWordWithConfidence} from '../common';
 import {parseImage} from './googlevision';
 
-const knownImages = JSON.parse(fs.readFileSync('../files/knownimages.json').toString());
+const knownImages = JSON.parse(fs.readFileSync(__dirname + '\\..\\files\\knownimages.json').toString());
 
 export function scanImageAndMatch(img: Buffer): Promise<Buffer> {
     return parseImage(img).then((words) => {
@@ -15,7 +15,7 @@ function matchToKnown(words: IWordWithConfidence[]): Buffer {
     const filtered = _.filter(words, (word: IWordWithConfidence) => {
         return _.some(knownImages, (known: IKnownImage) => {
             return _.some(known.fixwords, (fixword: string) => {
-                return fixword === word.text;
+                return fixword.toLowerCase() === word.text.toLowerCase();
             });
         });
     });
@@ -24,9 +24,9 @@ function matchToKnown(words: IWordWithConfidence[]): Buffer {
 
     const matches: IKnownImage = _.filter(knownImages, (known: IKnownImage) => {
         return _.some(known.fixwords, (fixword: string) => {
-            return fixword === maxConf.text;
+            return fixword.toLowerCase() === maxConf.text.toLowerCase();
         });
     })[0];
 
-    return new Buffer(matches.base64, 'base64');
+    return Buffer.from(matches.base64, 'base64');
 }

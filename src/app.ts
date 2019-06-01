@@ -1,13 +1,16 @@
+import bodyparser from 'body-parser';
 import compression from 'compression';
+import cors from 'cors';
 import errorhandler from 'errorhandler';
 import express from 'express';
 import {NextFunction, Request, Response} from 'express-serve-static-core';
 import session from 'express-session';
 import expressValidator from 'express-validator';
 import createError from 'http-errors';
+import multer from 'multer';
 
-import indexRouter from './routes/index';
-import usersRouter from './routes/users';
+import uploadRouter from './routes/upload';
+
 import {SESSION_SECRET} from './util/secrets';
 import logger from './util/winston';
 
@@ -15,9 +18,12 @@ const MemoryStore = (require('memorystore'))(session);
 
 const app = express();
 
+const base = '/api';
+
+const upload = multer();
+
 app.set('port', process.env.PORT || 3000);
 
-app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(compression());
 app.use(expressValidator());
@@ -29,18 +35,18 @@ app.use(session({
         checkPeriod: 3600000 // prune expired entries every hour
     })
 }));
+app.use(cors());
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json());
 
 if (app.get('env') === 'development') {
     app.use(errorhandler({log: logger.error}));
 }
 
-// App globals
-
 // Init services
 
 // Routes
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(base + '/upload', upload.any(), uploadRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     next(createError(404));
@@ -54,12 +60,12 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.send(`{
+    "error": ${err},
+    "msg": ${err.message}
+    }`);
 });
 
 logger.log('info', 'Started backend.');
-
-// tslint:disable-next-line:no-var-requires
-const gvi = require('./services/googlevision');
 
 export default app;

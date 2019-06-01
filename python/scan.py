@@ -9,7 +9,7 @@ import imutils
 import base64
 import time
 
-def downscale_image(im, max_dim=1024):
+def downscale_image(im, max_dim=512):
 	"""Shrink im until its longest dimension is <= max_dim.
 	Returns new_image, scale (where scale <= 1).
 	"""
@@ -44,25 +44,37 @@ def convertImage(b64string):
 	cnts = grab_contours(cnts)
 	cnts = sorted(cnts, key = cv2.contourArea, reverse = True)[:5]
 
+	cv2.imshow("Test", image)
+	cv2.imshow("edged", edged)
+	cv2.waitKey(0)
+	cv2.destroyAllWindows()
+
+	maxperi = 0
 	screenCnt = []
 	
 	for c in cnts:
 		peri = cv2.arcLength(c, True)
 		approx = cv2.approxPolyDP(c, 0.02 * peri, True)
-		if len(approx) == 4:
+		if len(approx) == 4 and maxperi < peri:
+			print(c)
 			screenCnt = approx
-			break
-			
-	if len(screenCnt) != 0:	
+			maxperi = peri
+
+	if len(screenCnt) != 0:
+		print("Found screen contour")
+
 		warped = four_point_transform(orig, screenCnt.reshape(4, 2) * ratio)
 		warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
-		retval, warped = cv2.threshold(warped, 155, 255, cv2.THRESH_BINARY)
+		retval, warped = cv2.threshold(warped, 140, 255, cv2.THRESH_BINARY)
 		
 		scale, warped = downscale_image(warped)
 		print("Resized image with %f scale" % scale)
 		retval, buf = cv2.imencode('.jpg', warped)
 
-		cv2.imwrite("test.jpg", warped);
+		cv2.imshow("Test", warped);
+		cv2.waitKey(0)
+
+		cv2.imwrite("test.jpg", warped)
 		
 		return True, base64_encode_array(buf)
 	else:
@@ -71,10 +83,11 @@ def convertImage(b64string):
 		print("Resized image with %f scale" % scale)
 		retval, buf = cv2.imencode('.jpg', orig)
 
-		cv2.imwrite("test.jpg", orig);
+		cv2.imwrite("test.jpg", orig)
 
 		return False, base64_encode_array(buf)
 
 	
-with open('rechnung5.jpg', 'rb') as fh:
+with open('Arztrechnung.jpg', 'rb') as fh:
 	retval, b64string = convertImage(base64.b64encode(fh.read()))
+

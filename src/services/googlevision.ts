@@ -16,7 +16,7 @@ export function parseImage(img: Buffer): Promise<IWordWithConfidence[]> {
 
     return new Promise(((resolve) => {
         const json = JSON.parse(fs.readFileSync('output.json').toString());
-        resolve(getWordsWithConfidence(json));
+        resolve(getWordsWithConfidence(json[0].fullTextAnnotation));
     }));
 
     // return client

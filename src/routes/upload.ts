@@ -1,31 +1,36 @@
 import {NextFunction, Request, Response} from 'express';
-import {checkSchema, ValidationSchema} from 'express-validator/check';
 
-import {parseImage} from '../services/googlevision';
+import {scanImageAndMatch} from '../services/scanning';
+import logger from '../util/winston';
 
 export default (() => {
     const express = require('express');
     const router = express.Router();
 
-    const schema: ValidationSchema = {
-        userid: {
-            in: 'body'
-        }, image: {
-            in: 'body',
-            isBase64: true
+    router.post('/', (req: Request, res: Response, next: NextFunction) => {
+        logger.info('Handling upload!');
+        const body = req.body;
+
+        if (!req.files || req.files.length < 1) {
+            const errmsg = 'Request has to be form encoded and contain a single file!';
+            logger.error(errmsg);
+            throw new Error(errmsg);
         }
-    };
 
-    router.post('/', [
-        checkSchema(schema)
-    ], (req: Request, res: Response, next: NextFunction) => {
-        const buf = new Buffer(req.body.image, 'base64');
+        const files: any = req.files;
 
-        const words = parseImage(buf);
+        res.type('application/json');
+        scanImageAndMatch(files[0].buffer).then((buf2) => {
+            logger.info('Sending response.');
+            res.json({
+                filename: `${files[0].originalname}-scanned.jpg`,
+                data: buf2.toString('base64')
+            });
+        }).catch((reason) => {
+            logger.error('Error while handling image!', reason);
+        });
 
-
-
-        res.type('json');
-        res.json();
     });
+
+    return router;
 })();

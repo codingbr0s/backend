@@ -49,7 +49,7 @@ function createWinstonLogger(test: boolean) {
                         format.splat(),
                         format.colorize(),
                         format.printf(
-                            (info) => ` ${info.label}  ${info.timestamp}  ${info.level} : ${info.message}`
+                            (info) => ` ${info.timestamp}  ${info.level} : ${info.message}`
                         )
                     )
                 })
