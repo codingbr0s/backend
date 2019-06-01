@@ -27,9 +27,9 @@ fs.readFile('./src/files/topcategories.json', (err, data) => {
                     const topCategory = topCategories[subcat.topCategoryId.toString()];
 
                     if (!topCategory.subcats) {
-                        topCategory.subcats = [];
+                        topCategory.subcats = {};
                     }
-                    topCategory.subcats.push(subcat);
+                    topCategory.subcats[subcat.categoryId] = subcat;
                 });
             }
         });
@@ -38,10 +38,27 @@ fs.readFile('./src/files/topcategories.json', (err, data) => {
 
 export function sumUpCategories() {
     const categories = Object.assign({}, topCategories);
-    _.forIn( transactions, (txn) => {
-        categories[txn.topcatid].subcats[txn.catid].amount += txn.amount;
-        categories[txn.topcatid].amount += txn.amount;
-    } );
+    _.forIn(transactions, (txn) => {
+        if (!categories[txn.topcatid]) {
+            logger.error(`${txn.topcatid} not in categories! Skipping!`);
+            return;
+        } else if (!categories[txn.topcatid].subcats[txn.catid]) {
+            logger.error(`${txn.catid} not in subcategories of ${txn.topcatid}! Skipping!`);
+            return;
+        }
+
+        if (categories[txn.topcatid].subcats[txn.catid].amount) {
+            categories[txn.topcatid].subcats[txn.catid].amount += txn.amount;
+        } else {
+            categories[txn.topcatid].subcats[txn.catid].amount = txn.amount;
+        }
+
+        if (categories[txn.topcatid].amount) {
+            categories[txn.topcatid].amount += txn.amount;
+        } else {
+            categories[txn.topcatid].amount = txn.amount;
+        }
+    });
 
     return categories;
 }

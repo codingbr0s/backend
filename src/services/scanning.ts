@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {IKnownImage, IWordWithConfidence} from '../common';
 import {parseImage} from './googlevision';
 
-const knownImages: IKnownImage[] = JSON.parse(fs.readFileSync(__dirname + '\\..\\files\\knownimages.json').toString());
+const knownImages: IKnownImage[] = JSON.parse(fs.readFileSync(__dirname + '/../files/knownimages.json').toString());
 
 export function scanImageAndMatch(img: Buffer): Promise<IKnownImage> {
     return parseImage(img).then((words) => {

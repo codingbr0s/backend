@@ -9,6 +9,7 @@ import expressValidator from 'express-validator';
 import createError from 'http-errors';
 import multer from 'multer';
 
+import transactionsRouter from './routes/transactions';
 import uploadRouter from './routes/upload';
 
 import {SESSION_SECRET} from './util/secrets';
@@ -36,7 +37,7 @@ app.use(session({
     })
 }));
 app.use(cors());
-app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.urlencoded({extended: true}));
 app.use(bodyparser.json());
 
 if (app.get('env') === 'development') {
@@ -47,6 +48,7 @@ if (app.get('env') === 'development') {
 
 // Routes
 app.use(base + '/upload', upload.any(), uploadRouter);
+app.use(base + '/transactions', transactionsRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     next(createError(404));

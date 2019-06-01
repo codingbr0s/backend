@@ -450,24 +450,6 @@
     "opposingname": "JP Krämer"
   },
   {
-    "transactid": 25,
-    "bankacctname": "Girokonto",
-    "catname": "Krankenhäuser",
-    "catid": 810090,
-    "topcatid": "#N/A",
-    "debitor": "Krankenhaus Düsseldorf",
-    "creditor": "Schmidt",
-    "counterparty": "Krankenhaus Düsseldorf",
-    "desc": "",
-    "note": "Krankenhaushonorar",
-    "date": 20190501,
-    "amount": "526,4",
-    "assetiban": "DE51300606011111111100",
-    "assetname": "Girokonto",
-    "opposingiban": "DE55300606013404488400",
-    "opposingname": "Krankenhaus Düsseldorf"
-  },
-  {
     "transactid": 26,
     "bankacctname": "Girokonto",
     "catname": "Kassenabrechnung (KV)",
