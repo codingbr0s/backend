@@ -47,7 +47,6 @@ function createWinstonLogger(test: boolean) {
                     format: format.combine(
                         format.timestamp(),
                         format.splat(),
-                        format.colorize(),
                         format.printf(
                             (info) => ` ${info.timestamp}  ${info.level} : ${info.message}`
                         )

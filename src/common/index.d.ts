@@ -15,8 +15,9 @@ export interface IKnownImage {
 }
 
 export interface ICategory {
-    id: number;
     name: string;
+    type: 'expense' | 'income';
+    subcats?: ICategory[];
 }
 
 export interface ISubCategory extends ICategory {

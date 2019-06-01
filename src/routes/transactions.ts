@@ -21,9 +21,8 @@ export default (() => {
         res.json(_.filter(transactions, (transaction) => transaction.TransactionId === id));
     });
 
-    router.get('/category/:level', (req: Request, res: Response, next: NextFunction) => {
-
-    });
+    // router.get('/category/:level', (req: Request, res: Response, next: NextFunction) => {
+    // });
 
     router.post('/', (req: Request, res: Response) => {
         const data = req.body;

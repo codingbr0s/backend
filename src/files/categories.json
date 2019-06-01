@@ -321,13 +321,13 @@
     "CategoryName": "Steuerpflichtige Gutachten 19% Ust"
   },
   {
-    "topCategoryId": "04",
-    "categoryId": "048000",
+    "topCategoryId": 4,
+    "categoryId": 48000,
     "CategoryName": "Geringwertige Wirtschaftsgüter"
   },
   {
-    "topCategoryId": "07",
-    "categoryId": "072000",
+    "topCategoryId": 7,
+    "categoryId": 72000,
     "CategoryName": "Praxisdarlehen"
   }
 ]
