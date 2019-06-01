@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 import {ICategory, ISubCategory} from '../common';
 import logger from '../util/winston';
 
-let transactions;
+let transactions:any;
 let topCategories: { [k: string]: ICategory };
 
 fs.readFile('./src/files/transactions.json', (err, data) => {
@@ -38,4 +38,10 @@ fs.readFile('./src/files/topcategories.json', (err, data) => {
 
 export function sumUpCategories() {
     const categories = Object.assign({}, topCategories);
+    _.forIn( transactions, (txn) => {
+        categories[txn.topcatid].subcats[txn.catid].amount += txn.amount;
+        categories[txn.topcatid].amount += txn.amount;
+    } );
+
+    return categories;
 }

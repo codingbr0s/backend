@@ -16,6 +16,7 @@ export interface IKnownImage {
 
 export interface ICategory {
     name: string;
+    amount?: number;
     type: 'expense' | 'income';
     subcats?: ICategory[];
 }
