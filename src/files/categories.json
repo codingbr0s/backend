@@ -11,295 +11,246 @@
   },
   {
     "topCategoryId": 17,
-
     "categoryId": 174200,
     "CategoryName": "Verbindlichkeiten soziale Sicherheit"
   },
   {
     "topCategoryId": 17,
-
     "categoryId": 175000,
     "CategoryName": "Verbindlichkeiten aus Vermögensbildung"
   },
   {
     "topCategoryId": 18,
-
     "categoryId": 182000,
     "CategoryName": "Sonderausgaben beschränkt abzugsfähige"
   },
   {
     "topCategoryId": 18,
-
     "categoryId": 182010,
     "CategoryName": "Lebensversicherungen"
   },
   {
     "topCategoryId": 18,
-
     "categoryId": 182040,
     "CategoryName": "Unfallversicherung"
   },
   {
     "topCategoryId": 18,
-
     "categoryId": 182050,
     "CategoryName": "Haftpflichtversicherung"
   },
   {
     "topCategoryId": 19,
-
     "categoryId": 190000,
     "CategoryName": "Privat"
   },
   {
     "topCategoryId": 21,
-
     "categoryId": 211800,
     "CategoryName": "Zinsen auf Kontokorrent"
   },
   {
     "topCategoryId": 21,
-
     "categoryId": 212000,
     "CategoryName": "Zinsaufwendungen für langfristige Verbindlichkeiten"
   },
   {
     "topCategoryId": 40,
-
     "categoryId": 400010,
     "CategoryName": "Medikamente Praxisbedarf"
   },
   {
     "topCategoryId": 40,
-
     "categoryId": 402000,
     "CategoryName": "Praxismaterial"
   },
   {
     "topCategoryId": 41,
-
     "categoryId": 412005,
     "CategoryName": "Kosten für Praxisvertretung"
   },
   {
     "topCategoryId": 41,
-
     "categoryId": 413800,
     "CategoryName": "Beiträge zur Berufsgenossenschaft"
   },
   {
     "topCategoryId": 41,
-
     "categoryId": 414000,
     "CategoryName": "Freiwillige soziale Aufwendungen"
   },
   {
     "topCategoryId": 41,
-
     "categoryId": 415200,
     "CategoryName": "Sachzuwendungen und Dienstleistungen an Arbeitnehmer"
   },
   {
     "topCategoryId": 42,
-
     "categoryId": 421000,
     "CategoryName": "Miete"
   },
   {
     "topCategoryId": 42,
-
     "categoryId": 424000,
     "CategoryName": "Gas, Strom, Wasser"
   },
   {
     "topCategoryId": 42,
-
     "categoryId": 425000,
     "CategoryName": "Reinigung, Desinfektion"
   },
   {
     "topCategoryId": 43,
-
     "categoryId": 436010,
     "CategoryName": "Berufshaftpflichtversicherung"
   },
   {
     "topCategoryId": 43,
-
     "categoryId": 438020,
     "CategoryName": "Kammerbeiträge"
   },
   {
     "topCategoryId": 45,
-
     "categoryId": 451000,
     "CategoryName": "Kfz-Steuer"
   },
   {
     "topCategoryId": 45,
-
     "categoryId": 452000,
     "CategoryName": "Kfz-Versicherungen"
   },
   {
     "topCategoryId": 45,
-
     "categoryId": 453000,
     "CategoryName": "Kfz-Betriebskosten"
   },
   {
     "topCategoryId": 45,
-
     "categoryId": 454000,
     "CategoryName": "Kfz-Reparaturen"
   },
   {
     "topCategoryId": 45,
-
     "categoryId": 455000,
     "CategoryName": "Garagenmieten"
   },
   {
     "topCategoryId": 45,
-
     "categoryId": 458000,
     "CategoryName": "Sonstige Kfz-Kosten"
   },
   {
     "topCategoryId": 46,
-
     "categoryId": 460000,
     "CategoryName": "Werbekosten"
   },
   {
     "topCategoryId": 46,
-
     "categoryId": 463000,
     "CategoryName": "Geschenke abzugsfähige"
   },
   {
     "topCategoryId": 46,
-
     "categoryId": 463500,
     "CategoryName": "Geschenke nicht abzugsfähige"
   },
   {
     "topCategoryId": 46,
-
     "categoryId": 463800,
     "CategoryName": "Geschenke ausschließlich betrieblich genutzt"
   },
   {
     "topCategoryId": 48,
-
     "categoryId": 480010,
     "CategoryName": "Instandhaltung Praxisgeräte"
   },
   {
     "topCategoryId": 48,
-
     "categoryId": 480600,
     "CategoryName": "Wartungskosten für Hard- und Software"
   },
   {
     "topCategoryId": 48,
-
     "categoryId": 481000,
     "CategoryName": "Miet- und Wartungsverträge Praxis"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 490000,
     "CategoryName": "Sonstiger Betriebsaufwand"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 491000,
     "CategoryName": "Porto"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 492000,
     "CategoryName": "Telefon"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 493000,
     "CategoryName": "Bürobedarf"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 494510,
     "CategoryName": "Fortbildungskosten/Arzt"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 494520,
     "CategoryName": "Konkress- und Seminarkosten Arbeitnehmer"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 495700,
     "CategoryName": "Abschluss- und Prüfungskosten"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 495000,
     "CategoryName": "Rechts- und Beratungskosten"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 495500,
     "CategoryName": "Buchführungskosten"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 494550,
     "CategoryName": "Fachliteratur"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 496900,
     "CategoryName": "Abfallbeseitigung"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 498000,
     "CategoryName": "Sonstiger Betriebsbedarf"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 498015,
     "CategoryName": "Berufsbekleidung, Praxiswäsche"
   },
   {
     "topCategoryId": 49,
-
     "categoryId": 498020,
     "CategoryName": "Wartezimmerlektüre"
   },
   {
     "topCategoryId": 81,
-
     "categoryId": 810010,
     "CategoryName": "Kassenabrechnung (KV)"
   },
   {
     "topCategoryId": 81,
-
     "categoryId": 810050,
     "CategoryName": "Privatabrechnung"
   },
@@ -309,8 +260,12 @@
     "CategoryName": "Akupunktur (individuell angelegt)"
   },
   {
+    "topCategoryId": 81,
+    "categoryId": 810090,
+    "CategoryName": "Krankenhäuser"
+  },
+  {
     "topCategoryId": 82,
-
     "categoryId": 820010,
     "CategoryName": "Vorträge, schriftstellerische Tätigkeiten"
   },
