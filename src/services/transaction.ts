@@ -170,31 +170,167 @@ export function getTransactionForID(id: number) {
     return {};
 }
 
-export function getTopBusinessPartners(): any[] {
-    const partners: { [k: string]: number } = {};
+export function getTopBusinessPartners():
+    Array<{ name: string, amount: number, displayamount: string, transactions: ITransaction[] }> {
+    const partners: {
+        [k: string]: {
+            amount: number,
+            transactions: ITransaction[]
+        }
+    } = {};
 
     // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < transactions.length; i++) {
-        const transaction = transactions[i];
+        const transaction = Object.assign({}, transactions[i]);
+        transaction.displayamount = numeral(Math.abs(transaction.amount)).format('0.00[,]00$');
         const debitor = transaction.debitor;
-        if (partners[debitor]) {
-            partners[debitor] = transaction.amount;
+        if (!partners[debitor]) {
+            partners[debitor] = {
+                amount: transaction.amount,
+                transactions: [transaction]
+            };
         } else {
-            partners[debitor] += transaction.amount;
+            partners[debitor].amount += transaction.amount;
+            partners[debitor].transactions.push(transaction);
         }
     }
 
-    const sortedKeys = _.sortBy(Object.keys(partners), (key) => partners[key]);
+    const sortedKeys = _.sortBy(Object.keys(partners), (key) => partners[key].amount);
     const ret = [];
 
     for (let i = 0; i < sortedKeys.length && i < 10; i++) {
         ret.push({
             name: sortedKeys[i],
-            amount: partners[sortedKeys[i]]
+            amount: partners[sortedKeys[i]].amount,
+            displayamount: numeral(partners[sortedKeys[i]].amount).format('0.00[,]00$'),
+            transactions: _.sortBy(partners[sortedKeys[i]].transactions, (transaction) => transaction.amount)
         });
     }
 
     return _.reverse(ret);
+}
+
+export function getBusinessPartner(name: string) {
+    let found = false;
+
+    let amount = 0;
+    const filteredTransactions: ITransaction[] = [];
+    _.forEach(transactions, (transaction) => {
+        if (transaction.debitor.toLowerCase() === name.toLowerCase()) {
+            found = true;
+            amount += transaction.amount;
+            filteredTransactions.push(transaction);
+        }
+    });
+    const displayamount = numeral(amount).format('0.00[,]00$');
+
+    if (found) {
+        return {
+            amount,
+            displayamount,
+            transactions: _.sortBy(filteredTransactions, (transaction) => transaction.amount)
+        };
+    } else {
+        return {};
+    }
+}
+
+export function getTopPartnersForSubCategory(id: number) {
+    let found = false;
+
+    const partners: {
+        [k: string]: {
+            name: string;
+            transactions: ITransaction[];
+            amount: number;
+            displayamount?: string;
+        }
+    } = {};
+    _.forEach(transactions, (transaction) => {
+        if (transaction.catid === Number(id)) {
+            found = true;
+
+            const debitor = transaction.debitor;
+            if (!partners[debitor]) {
+                partners[debitor] = {
+                    name: debitor,
+                    transactions: [transaction],
+                    amount: transaction.amount
+                };
+                found = true;
+            } else {
+                partners[debitor].transactions.push(transaction);
+                partners[debitor].amount += transaction.amount;
+            }
+        }
+    });
+
+    const sortedKeys = _.sortBy(Object.keys(partners), (key) => partners[key].amount);
+    const ret = [];
+
+    for (let i = 0; i < sortedKeys.length && i < 10; i++) {
+        ret.push({
+            name: sortedKeys[i],
+            amount: partners[sortedKeys[i]].amount,
+            displayamount: numeral(partners[sortedKeys[i]].amount).format('0.00[,]00$'),
+            transactions: _.sortBy(partners[sortedKeys[i]].transactions, (transaction) => transaction.amount)
+        });
+    }
+
+    if (found) {
+        return ret;
+    } else {
+        return [];
+    }
+}
+
+export function getTopPartnersForCategory(id: number) {
+    let found = false;
+
+    const partners: {
+        [k: string]: {
+            name: string;
+            transactions: ITransaction[];
+            amount: number;
+            displayamount?: string;
+        }
+    } = {};
+    _.forEach(transactions, (transaction) => {
+        if (transaction.topcatid === Number(id)) {
+            found = true;
+
+            const debitor = transaction.debitor;
+            if (!partners[debitor]) {
+                partners[debitor] = {
+                    name: debitor,
+                    transactions: [transaction],
+                    amount: transaction.amount
+                };
+                found = true;
+            } else {
+                partners[debitor].transactions.push(transaction);
+                partners[debitor].amount += transaction.amount;
+            }
+        }
+    });
+
+    const sortedKeys = _.sortBy(Object.keys(partners), (key) => partners[key].amount);
+    const ret = [];
+
+    for (let i = 0; i < sortedKeys.length && i < 10; i++) {
+        ret.push({
+            name: sortedKeys[i],
+            amount: partners[sortedKeys[i]].amount,
+            displayamount: numeral(partners[sortedKeys[i]].amount).format('0.00[,]00$'),
+            transactions: _.sortBy(partners[sortedKeys[i]].transactions, (transaction) => transaction.amount)
+        });
+    }
+
+    if (found) {
+        return ret;
+    } else {
+        return [];
+    }
 }
 
 export function addTransaction(transaction: ITransaction) {
@@ -222,8 +358,24 @@ export function addTransaction(transaction: ITransaction) {
     return transaction;
 }
 
-export function getNewTransactions(): ITransaction[] {
-    return newTransactions;
+export function getNewTransactions(): {
+    amount: number,
+    displayamount: string,
+    transactions: ITransaction[]
+} {
+    let amount = 0;
+
+    for (const newTransaction of newTransactions) {
+        amount += newTransaction.amount;
+    }
+
+    const displayamount = numeral(Math.abs(amount)).format('0.00[,]00$');
+
+    return {
+        amount,
+        displayamount,
+        transactions: _.reverse(newTransactions)
+    };
 }
 
 function getMaxTransactionID() {

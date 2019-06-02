@@ -11,6 +11,7 @@ import multer from 'multer';
 import numeral from 'numeral';
 
 import categoriesRouter from './routes/categories';
+import partnerRouter from './routes/partners';
 import transactionsRouter from './routes/transactions';
 import uploadRouter from './routes/upload';
 
@@ -52,6 +53,7 @@ if (app.get('env') === 'development') {
 app.use(base + '/upload', upload.any(), uploadRouter);
 app.use(base + '/transactions', transactionsRouter);
 app.use(base + '/categories', categoriesRouter);
+app.use(base + '/partners', partnerRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     next(createError(404));

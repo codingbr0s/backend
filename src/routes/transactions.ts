@@ -6,7 +6,7 @@ export default (() => {
     const express = require('express');
     const router = express.Router();
 
-    router.get('/:id(\d+)', (req: Request, res: Response, next: NextFunction) => {
+    router.get('/:id(\\d+)', (req: Request, res: Response, next: NextFunction) => {
         const id = req.params.id;
         logger.info(`Returning transaction ${id}`);
         res.json(getTransactionForID(id));

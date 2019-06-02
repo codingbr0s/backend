@@ -27,7 +27,7 @@ export default (() => {
 
             const info = Object.assign({}, scannedInvoice.info);
 
-            info.displayamount = numeral(info.amount).format('0.0[,]00 $');
+            info.displayamount = numeral(Math.abs(info.amount)).format('0.0[,]00 $');
             logger.debug('Sending: ' + JSON.stringify(info));
 
             res.json(info);

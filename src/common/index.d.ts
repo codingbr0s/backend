@@ -45,4 +45,5 @@ export interface ITransaction {
     assetname: string;
     opposingiban: string;
     opposingname: string;
+    displayamount?: string;
 }
