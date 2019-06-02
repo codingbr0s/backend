@@ -1,10 +1,16 @@
 import * as fs from 'fs';
 import * as _ from 'lodash';
-import {ICategory, ISubCategory} from '../common';
+import numeral from 'numeral';
+import {ICategory, ISubCategory, ITransaction} from '../common';
 import logger from '../util/winston';
 
-let transactions: any;
+let transactions: ITransaction[];
 let topCategories: { [k: string]: ICategory };
+
+const expenseCategoryIDs: string[] = [];
+const incomeCategoryIDs: string[] = [];
+
+const newTransactions: ITransaction[] = [];
 
 fs.readFile('./src/files/transactions.json', (err, data) => {
     if (err) {
@@ -19,6 +25,13 @@ fs.readFile('./src/files/topcategories.json', (err, data) => {
         logger.error('Could not read topcategories.json. Maybe copy the file over? ', err);
     } else {
         topCategories = JSON.parse(data.toString());
+
+        for (const key in topCategories) {
+            if (key in topCategories) {
+                topCategories[key].categoryId = Number(key);
+            }
+        }
+
         fs.readFile('./src/files/categories.json', (err2, data2) => {
             if (err2) {
                 logger.error('Could not read categories.json. Maybe copy the file over? ', err2);
@@ -33,12 +46,81 @@ fs.readFile('./src/files/topcategories.json', (err, data) => {
                 });
             }
         });
+
+        for (const cat in topCategories) {
+            if (cat in topCategories) {
+                if (topCategories[cat].type === 'expense') {
+                    expenseCategoryIDs.push(cat);
+                } else {
+                    incomeCategoryIDs.push(cat);
+                }
+            }
+        }
     }
 });
 
+export function sumUpExpenseCategories() {
+    const categories = Object.assign({}, topCategories);
+
+    for (const catId of incomeCategoryIDs) {
+        delete categories[catId];
+    }
+
+    _.forEach(transactions, (txn) => {
+        if (!expenseCategoryIDs.includes(txn.topcatid.toString())) {
+            return;
+        }
+
+        if (categories[txn.topcatid].subcats[txn.catid].amount) {
+            categories[txn.topcatid].subcats[txn.catid].amount += txn.amount;
+        } else {
+            categories[txn.topcatid].subcats[txn.catid].amount = txn.amount;
+        }
+
+        if (categories[txn.topcatid].amount) {
+            categories[txn.topcatid].amount += txn.amount;
+        } else {
+            categories[txn.topcatid].amount = txn.amount;
+        }
+    });
+    const ret: ICategory[] = _.map(Object.keys(categories), (key) => Object.assign({}, categories[key]));
+
+    return filterAndGenerateDisplayAmount(ret);
+}
+
+export function sumUpIncomeCategories() {
+    const categories = Object.assign({}, topCategories);
+
+    for (const catId of expenseCategoryIDs) {
+        delete categories[catId];
+    }
+
+    _.forEach(transactions, (txn) => {
+        if (!incomeCategoryIDs.includes(txn.topcatid.toString())) {
+            return;
+        }
+
+        if (categories[txn.topcatid].subcats[txn.catid].amount) {
+            categories[txn.topcatid].subcats[txn.catid].amount += txn.amount;
+        } else {
+            categories[txn.topcatid].subcats[txn.catid].amount = txn.amount;
+        }
+
+        if (categories[txn.topcatid].amount) {
+            categories[txn.topcatid].amount += txn.amount;
+        } else {
+            categories[txn.topcatid].amount = txn.amount;
+        }
+    });
+
+    const ret: ICategory[] = _.map(Object.keys(categories), (key) => Object.assign({}, categories[key]));
+
+    return filterAndGenerateDisplayAmount(ret, true);
+}
+
 export function sumUpCategories() {
     const categories = Object.assign({}, topCategories);
-    _.forIn(transactions, (txn) => {
+    _.forEach(transactions, (txn) => {
         if (!categories[txn.topcatid]) {
             logger.error(`${txn.topcatid} not in categories! Skipping!`);
             return;
@@ -60,5 +142,114 @@ export function sumUpCategories() {
         }
     });
 
-    return categories;
+    const ret: ICategory[] = _.map(Object.keys(categories), (key) => Object.assign({}, categories[key]));
+
+    return filterAndGenerateDisplayAmount(ret);
+}
+
+export function getSubcategoriesForCategory(categoryId: number) {
+    if (!topCategories[categoryId]) {
+        logger.error(`No top category with id ${categoryId}!`);
+        return {};
+    }
+
+    return Object.assign({}, topCategories[categoryId]);
+}
+
+export function getTransactionsForSubCategory(categoryId: number) {
+    // tslint:disable-next-line:triple-equals
+    return _.filter(transactions, (transaction) => transaction.catid == categoryId);
+}
+
+export function getTransactionForID(id: number) {
+    // tslint:disable-next-line:triple-equals
+    const ret = _.filter(transactions, (transaction) => transaction.transactid == id);
+    if (ret) {
+        return ret[0];
+    }
+    return {};
+}
+
+export function getTopBusinessPartners(): any[] {
+    const partners: { [k: string]: number } = {};
+
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < transactions.length; i++) {
+        const transaction = transactions[i];
+        const debitor = transaction.debitor;
+        if (partners[debitor]) {
+            partners[debitor] = transaction.amount;
+        } else {
+            partners[debitor] += transaction.amount;
+        }
+    }
+
+    const sortedKeys = _.sortBy(Object.keys(partners), (key) => partners[key]);
+    const ret = [];
+
+    for (let i = 0; i < sortedKeys.length && i < 10; i++) {
+        ret.push({
+            name: sortedKeys[i],
+            amount: partners[sortedKeys[i]]
+        });
+    }
+
+    return _.reverse(ret);
+}
+
+export function addTransaction(transaction: ITransaction) {
+    const transactid = getMaxTransactionID() + 1;
+    const date = new Date().toISOString();
+
+    transaction = Object.assign(transaction, {
+        bankacctname: 'Girokonto',
+        debitor: 'Schmidt',
+        counterparty: transaction.debitor,
+        date: date.substr(0, date.indexOf('T')).replace(/-/gm, ''),
+        assetiban: 'DE51300606011111111100',
+        assetname: 'Girokonto',
+        // @ts-ignore
+        opposingiban: transaction.iban,
+        opposingname: transaction.debitor
+    });
+
+    transaction.amount = -transaction.amount;
+    transaction.transactid = transactid;
+
+    transactions.push(transaction);
+    newTransactions.push(transaction);
+
+    return transaction;
+}
+
+export function getNewTransactions(): ITransaction[] {
+    return newTransactions;
+}
+
+function getMaxTransactionID() {
+    return _.maxBy(transactions, (transaction) => transaction.transactid).transactid;
+}
+
+function filterAndGenerateDisplayAmount(cats: ICategory[], reverse = false): ICategory[] {
+    try {
+        const ret = _.sortBy(Object.assign({}, cats), (cat) => cat.amount ? cat.amount : 0).map((cat) => {
+            cat.displayamount = numeral(Math.abs(cat.amount ? cat.amount : 0)).format('0.00[,]00$');
+            // @ts-ignore
+            cat.subcats = _.sortBy(_.map(cat.subcats, (subcat) => {
+                subcat.displayamount = numeral(Math.abs(subcat.amount ? subcat.amount : 0)).format('0.00[,]00$');
+                return subcat;
+            }), (subcat) => subcat.amount);
+
+            if (reverse) {
+                // @ts-ignore
+                cat.subcats = _.reverse(cat.subcats);
+            }
+
+            return cat;
+        });
+        return reverse ? _.reverse(ret) : ret;
+    } catch (e) {
+        logger.error(e);
+        return [];
+    }
 }

@@ -1,4 +1,5 @@
 import {NextFunction, Request, Response} from 'express';
+import numeral from 'numeral';
 import {IKnownImage} from '../common';
 
 import {scanImageAndMatch} from '../services/scanning';
@@ -23,7 +24,13 @@ export default (() => {
         res.type('application/json');
         scanImageAndMatch(files[0].buffer).then((scannedInvoice: IKnownImage) => {
             logger.info('Sending response.');
-            res.json(scannedInvoice.info);
+
+            const info = Object.assign({}, scannedInvoice.info);
+
+            info.displayamount = numeral(info.amount).format('0.0[,]00 $');
+            logger.debug('Sending: ' + JSON.stringify(info));
+
+            res.json(info);
         }).catch((reason) => {
             logger.error('Error while handling image!', reason);
         });

@@ -11,9 +11,9 @@
   "46": { "type":"expense", "name": "Werbungskosten"},
   "48": { "type":"expense", "name": "Betriebsaufwände"},
   "49": { "type":"expense", "name": "Betriebsaufwände"},
-  "81": { "type":"expense", "name": "Primäre Einnahmen"},
-  "82": { "type":"expense", "name": "Sonstige Einnahmen"},
-  "84": { "type":"expense", "name": "Sonstige Einnahmen"},
+  "81": { "type":"income", "name": "Primäre Einnahmen"},
+  "82": { "type":"income", "name": "Sonstige Einnahmen"},
+  "84": { "type":"income", "name": "Sonstige Einnahmen"},
   "4": { "type":"expense", "name":  "Kleine Anschaffungen"},
   "7": { "type":"expense", "name": "Darlehen"}
 }

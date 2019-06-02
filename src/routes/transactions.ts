@@ -1,39 +1,37 @@
 import {NextFunction, Request, Response} from 'express';
-
-import * as fs from 'fs';
-import _ from 'lodash';
-import {sumUpCategories} from '../services/transaction';
+import {addTransaction, getNewTransactions, getTopBusinessPartners, getTransactionForID} from '../services/transaction';
 import logger from '../util/winston';
 
 export default (() => {
     const express = require('express');
     const router = express.Router();
 
-    router.get('/', (req: Request, res: Response, next: NextFunction) => {
-        res.type('application/json');
-        res.json(sumUpCategories());
+    router.get('/:id(\d+)', (req: Request, res: Response, next: NextFunction) => {
+        const id = req.params.id;
+        logger.info(`Returning transaction ${id}`);
+        res.json(getTransactionForID(id));
     });
 
-    // router.get('/:id', (req: Request, res: Response, next: NextFunction) => {
-    //     const id = req.params.id;
-    //     logger.info(`Returning transaction ${id}`);
-    //     res.json();
-    // });
+    router.get('/toppartners', (req: Request, res: Response, next: NextFunction) => {
+        try {
+            logger.info('Getting top partners.');
+            const partners = getTopBusinessPartners();
+            res.json(partners);
+        } catch (e) {
+            logger.error(e);
+        }
+    });
 
-    // router.get('/category/:level', (req: Request, res: Response, next: NextFunction) => {
-    // });
+    router.get('/new', (req: Request, res: Response) => {
+        logger.info('Returning new transactions');
+        res.json(getNewTransactions());
+    });
 
-    // router.post('/', (req: Request, res: Response) => {
-    //     const data = req.body;
-    //
-    //     const timestamp = new Date().toISOString();
-    //
-    //     const transaction = Object.assign({
-    //         timestamp: timestamp.substr(timestamp.indexOf('T'))
-    //     }, data);
-    //
-    //     res.json(transaction);
-    // });
+    router.post('/', (req: Request, res: Response) => {
+        const data = req.body;
+        addTransaction(data);
+        res.json(data);
+    });
 
     return router;
 

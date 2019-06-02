@@ -8,7 +8,9 @@ import session from 'express-session';
 import expressValidator from 'express-validator';
 import createError from 'http-errors';
 import multer from 'multer';
+import numeral from 'numeral';
 
+import categoriesRouter from './routes/categories';
 import transactionsRouter from './routes/transactions';
 import uploadRouter from './routes/upload';
 
@@ -49,6 +51,7 @@ if (app.get('env') === 'development') {
 // Routes
 app.use(base + '/upload', upload.any(), uploadRouter);
 app.use(base + '/transactions', transactionsRouter);
+app.use(base + '/categories', categoriesRouter);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     next(createError(404));
@@ -63,10 +66,31 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     // render the error page
     res.status(err.status || 500);
     res.send(`{
-    "error": ${err},
-    "msg": ${err.message}
+    "error": "${err}",
+    "msg": "${err.message}"
     }`);
 });
+
+// @ts-ignore
+numeral.register('locale', 'de', {
+    delimiters: {
+        thousands: '.',
+        decimal: ','
+    },
+    abbreviations: {
+        thousand: 'k',
+        million: 'm',
+        billion: 'b',
+        trillion: 't'
+    },
+    ordinal: (num) => {
+        return num;
+    },
+    currency: {
+        symbol: '€'
+    }
+});
+numeral.locale('de');
 
 logger.log('info', 'Started backend.');
 

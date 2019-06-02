@@ -1,11 +1,35 @@
 [
   {
-    "fixwords": ["Tor-Apotheke", "Medikus", "Tationil", "27297"],
+    "fixwords": [
+      "Tor-Apotheke",
+      "Medikus",
+      "Tationil",
+      "27297"
+    ],
     "info": {
       "desc": "Rechnung Nr. M 24",
       "creditor": "Tor-Apotheke, Inh. Dr. Medikus",
       "iban": "DE12300400000987654300",
-      "amount": 675.31
+      "amount": 675.31,
+      "catid": 400010,
+      "topcatid": 40
+    }
+  },
+  {
+    "fixwords": [
+      "Servicetechnik",
+      "103101",
+      "4482395",
+      "DE8198303",
+      "182/230/299"
+    ],
+    "info": {
+      "desc": "Rechnung Nr. 4482395",
+      "creditor": "Medizin Servicetechnik - Dorstener Str. 41 - 40472 DDorf",
+      "iban": "DE53300501102241852800",
+      "amount": 378.52,
+      "catid": 480010,
+      "topcatid": 48
     }
   }
 ]

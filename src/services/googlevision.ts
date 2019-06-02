@@ -18,6 +18,7 @@ export function parseImage(img: Buffer): Promise<IWordWithConfidence[]> {
             if (results.length > 0) {
                 return getWordsWithConfidence(results[0].fullTextAnnotation);
             }
+            return [];
         })
         .catch((err: any) => {
             console.error('ERROR:', err);
