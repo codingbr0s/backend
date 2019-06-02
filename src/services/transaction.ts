@@ -158,7 +158,11 @@ export function getSubcategoriesForCategory(categoryId: number) {
 
 export function getTransactionsForSubCategory(categoryId: number) {
     // tslint:disable-next-line:triple-equals
-    return _.filter(transactions, (transaction) => transaction.catid == categoryId);
+    return _.map(_.filter(transactions, (transaction) => transaction.catid == categoryId), (transaction) => {
+        return Object.assign({
+            displayvalue: numeral(Math.abs(transaction.amount)).format('0.00[,]00$')
+        }, transaction);
+    });
 }
 
 export function getTransactionForID(id: number) {
