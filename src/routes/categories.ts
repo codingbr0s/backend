@@ -1,9 +1,13 @@
 import {NextFunction, Request, Response} from 'express';
 import {
-    getSubcategoriesForCategory, getTopPartnersForCategory, getTopPartnersForSubCategory,
+    getSubcategoriesForCategory,
+    getTopPartnersForCategory,
+    getTopPartnersForSubCategory,
     getTransactionsForSubCategory,
     sumUpCategories,
     sumUpExpenseCategories,
+    sumUpExpenses,
+    sumUpIncome,
     sumUpIncomeCategories
 } from '../services/transaction';
 import logger from '../util/winston';
@@ -18,6 +22,7 @@ export default (() => {
     });
 
     router.get('/expenses/', (req: Request, res: Response, next: NextFunction) => {
+        logger.info('Returning expenses!');
         res.type('application/json');
         res.json(sumUpExpenseCategories());
     });
@@ -25,6 +30,17 @@ export default (() => {
     router.get('/income/', (req: Request, res: Response, next: NextFunction) => {
         res.type('application/json');
         res.json(sumUpIncomeCategories());
+    });
+
+    router.get('/expenses/sum', (req: Request, res: Response, next: NextFunction) => {
+        logger.info('Returning expenses sum!');
+        res.type('application/json');
+        res.json(sumUpExpenses());
+    });
+
+    router.get('/income/sum', (req: Request, res: Response, next: NextFunction) => {
+        res.type('application/json');
+        res.json(sumUpIncome());
     });
 
     router.get('/:id(\\d+)', (req: Request, res: Response, next: NextFunction) => {

@@ -618,16 +618,16 @@
     "catid": 494510,
     "topcatid": 49,
     "debitor": "Schmidt",
-    "creditor": "NaonTeach (Akupunkturschulung)",
-    "counterparty": "NaonTeach (Akupunkturschulung)",
+    "creditor": "GSA - Gesellschaft für Akupunktur",
+    "counterparty": "GSA - Gesellschaft für Akupunktur",
     "desc": "",
     "note": "Fortbildungskosten/Arzt",
     "date": "20190501",
     "amount": -2142,
     "assetiban": "DE51300606011111111100",
     "assetname": "Girokonto",
-    "opposingiban": "DE41300606019745676900",
-    "opposingname": "NaonTeach (Akupunkturschulung)"
+    "opposingiban": "DE72370205000009709700",
+    "opposingname": "GSA - Gesellschaft für Akupunktur"
   },
   {
     "transactid": 36,

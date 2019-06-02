@@ -31,5 +31,22 @@
       "catid": 480010,
       "topcatid": 48
     }
+  },
+  {
+    "fixwords": [
+      "GSA",
+      "Schmitd",
+      "382987323",
+      "A/B/C",
+      "2.142,00"
+    ],
+    "info": {
+      "desc": "Rechnung Nr. 382987323",
+      "creditor": "GSA - Gesellschaft für Akupunktur",
+      "iban": "DE72370205000009709700",
+      "amount": 2142,
+      "catid": 494510,
+      "topcatid": 49
+    }
   }
 ]

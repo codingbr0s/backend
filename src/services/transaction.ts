@@ -150,7 +150,7 @@ export function sumUpCategories() {
 export function getSubcategoriesForCategory(categoryId: number) {
     if (!topCategories[categoryId]) {
         logger.error(`No top category with id ${categoryId}!`);
-        return {};
+        return {type: 'none'};
     }
 
     return Object.assign({}, topCategories[categoryId]);
@@ -182,16 +182,17 @@ export function getTopBusinessPartners():
     // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < transactions.length; i++) {
         const transaction = Object.assign({}, transactions[i]);
+        const expense = getSubcategoriesForCategory(transaction.topcatid).type === 'expense';
         transaction.displayamount = numeral(Math.abs(transaction.amount)).format('0.00[,]00$');
-        const debitor = transaction.debitor;
-        if (!partners[debitor]) {
-            partners[debitor] = {
+        const name = expense ? transaction.creditor : transaction.debitor;
+        if (!partners[name]) {
+            partners[name] = {
                 amount: transaction.amount,
                 transactions: [transaction]
             };
         } else {
-            partners[debitor].amount += transaction.amount;
-            partners[debitor].transactions.push(transaction);
+            partners[name].amount += transaction.amount;
+            partners[name].transactions.push(transaction);
         }
     }
 
@@ -210,13 +211,35 @@ export function getTopBusinessPartners():
     return _.reverse(ret);
 }
 
+export function sumUpExpenses() {
+    const cats = sumUpExpenseCategories();
+
+    const amount = _.sumBy(cats, (cat) => cat.amount);
+    return {
+        amount,
+        displayamount: numeral(Math.abs(amount)).format('0.00[,]00$')
+    };
+}
+
+export function sumUpIncome() {
+    const cats = sumUpIncomeCategories();
+
+    const amount = _.sumBy(cats, (cat) => cat.amount);
+    return {
+        amount,
+        displayamount: numeral(Math.abs(amount)).format('0.00[,]00$')
+    };
+}
+
 export function getBusinessPartner(name: string) {
     let found = false;
 
     let amount = 0;
     const filteredTransactions: ITransaction[] = [];
     _.forEach(transactions, (transaction) => {
-        if (transaction.debitor.toLowerCase() === name.toLowerCase()) {
+        const expense = getSubcategoriesForCategory(transaction.topcatid).type === 'expense';
+        if (expense && transaction.creditor.toLowerCase() === name.toLowerCase() ||
+            !expense && transaction.debitor.toLowerCase() === name.toLowerCase()) {
             found = true;
             amount += transaction.amount;
             filteredTransactions.push(transaction);
@@ -248,19 +271,24 @@ export function getTopPartnersForSubCategory(id: number) {
     } = {};
     _.forEach(transactions, (transaction) => {
         if (transaction.catid === Number(id)) {
-            found = true;
 
-            const debitor = transaction.debitor;
-            if (!partners[debitor]) {
-                partners[debitor] = {
-                    name: debitor,
-                    transactions: [transaction],
+            found = true;
+            const expense = getSubcategoriesForCategory(transaction.topcatid).type === 'expense';
+            const name = expense ? transaction.creditor : transaction.debitor;
+            if (!partners[name]) {
+                partners[name] = {
+                    name,
+                    transactions: [Object.assign({
+                        displayamount: numeral(Math.abs(transaction.amount)).format('0.00[,]00$')
+                    }, transaction)],
                     amount: transaction.amount
                 };
                 found = true;
             } else {
-                partners[debitor].transactions.push(transaction);
-                partners[debitor].amount += transaction.amount;
+                partners[name].transactions.push(Object.assign({
+                    displayamount: numeral(Math.abs(transaction.amount)).format('0.00[,]00$')
+                }, transaction));
+                partners[name].amount += transaction.amount;
             }
         }
     });
@@ -299,17 +327,22 @@ export function getTopPartnersForCategory(id: number) {
         if (transaction.topcatid === Number(id)) {
             found = true;
 
-            const debitor = transaction.debitor;
-            if (!partners[debitor]) {
-                partners[debitor] = {
-                    name: debitor,
-                    transactions: [transaction],
+            const expense = getSubcategoriesForCategory(transaction.topcatid).type === 'expense';
+            const name = expense ? transaction.creditor : transaction.debitor;
+            if (!partners[name]) {
+                partners[name] = {
+                    name,
+                    transactions: [Object.assign({
+                        displayamount: numeral(Math.abs(transaction.amount)).format('0.00[,]00$')
+                    }, transaction)],
                     amount: transaction.amount
                 };
                 found = true;
             } else {
-                partners[debitor].transactions.push(transaction);
-                partners[debitor].amount += transaction.amount;
+                partners[name].transactions.push(Object.assign({
+                    displayamount: numeral(Math.abs(transaction.amount)).format('0.00[,]00$')
+                }, transaction));
+                partners[name].amount += transaction.amount;
             }
         }
     });
