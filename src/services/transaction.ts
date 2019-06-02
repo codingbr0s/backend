@@ -60,7 +60,7 @@ fs.readFile('./src/files/topcategories.json', (err, data) => {
 });
 
 export function sumUpExpenseCategories() {
-    const categories = Object.assign({}, topCategories);
+    const categories = JSON.parse(JSON.stringify(topCategories));
 
     for (const catId of incomeCategoryIDs) {
         delete categories[catId];
@@ -89,7 +89,7 @@ export function sumUpExpenseCategories() {
 }
 
 export function sumUpIncomeCategories() {
-    const categories = Object.assign({}, topCategories);
+    const categories = JSON.parse(JSON.stringify(topCategories));
 
     for (const catId of expenseCategoryIDs) {
         delete categories[catId];
@@ -119,7 +119,7 @@ export function sumUpIncomeCategories() {
 }
 
 export function sumUpCategories() {
-    const categories = Object.assign({}, topCategories);
+    const categories = JSON.parse(JSON.stringify(topCategories));
     _.forEach(transactions, (txn) => {
         if (!categories[txn.topcatid]) {
             logger.error(`${txn.topcatid} not in categories! Skipping!`);
